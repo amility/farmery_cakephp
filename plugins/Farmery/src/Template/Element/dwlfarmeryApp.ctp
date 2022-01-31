@@ -48,12 +48,12 @@
                                                     <div class="d-flex pt-2 justify-content-center">
                                                         <a href="https://apps.apple.com/us/app/farmery/id1414220360?ls=1"
                                                             target="_blank" tabindex="0">
-                                                            <img src="img/app_store_icon.svg"
+                                                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/app_store_icon.svg'?>"
                                                                 class="mr-2 download-icon-style">
                                                         </a>
                                                         <a href="https://play.google.com/store/apps/details?id=com.fudfill"
                                                             target="_blank" tabindex="0">
-                                                            <img src="img/google_play_icon.svg"
+                                                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/google_play_icon.svg'?>"
                                                                 class="download-icon-style">
                                                         </a>
                                                     </div>
@@ -70,7 +70,7 @@
                                         style="width: 100%; display: inline-block;">
                                         <div class="d-flex justify-content-center">
                                             <div class="w-50 img-effect">
-                                                <img src="img/splash-screen.png" class="w-100">
+                                                <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/splash-screen.png'?>" class="w-100">
                                             </div>
                                         </div>
                                         <div class="download-slide-text">
@@ -92,12 +92,12 @@
                                         style="width: 100%; display: inline-block;">
                                         <div class="d-flex justify-content-center">
                                             <div class="w-50 img-effect">
-                                                <img src="img/wallet-screen.png" class="w-100">
+                                                <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/wallet-screen.png'?>" class="w-100">
                                             </div>
                                         </div>
                                         <div class="download-slide-text d-flex justify-content-center w-100">
                                             <figure>
-                                                <img src="img/icon_wallet.svg">
+                                                <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/icon_wallet.svg'?>">
                                                 <figcaption class="pt-3 font-weight-bolder text-smaller">
                                                     CHARGE WALLET</figcaption>
                                             </figure>
@@ -112,12 +112,12 @@
                                         style="width: 100%; display: inline-block;">
                                         <div class="d-flex justify-content-center">
                                             <div class="w-50 img-effect">
-                                                <img src="img/browse-product-screen.png" class="w-100">
+                                                <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/browse-product-screen.png'?>" class="w-100">
                                             </div>
                                         </div>
                                         <div class="download-slide-text d-flex justify-content-center w-100">
                                             <figure>
-                                                <img src="img/icon_milk_bottle.svg">
+                                                <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/icon_milk_bottle.svg'?>">
                                                 <figcaption class="pt-3 font-weight-bolder text-smaller">
                                                     SELECT PRODUCT</figcaption>
                                             </figure>
@@ -132,12 +132,12 @@
                                         style="width: 100%; display: inline-block;">
                                         <div class="d-flex justify-content-center">
                                             <div class="w-50 img-effect">
-                                                <img src="img/order-screen.png" class="w-100">
+                                                <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/order-screen.png'?>" class="w-100">
                                             </div>
                                         </div>
                                         <div class="download-slide-text d-flex justify-content-center w-100">
                                             <figure>
-                                                <img src="img/icon_delivery_scooter.svg">
+                                                <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/icon_delivery_scooter.svg'?>">
                                                 <figcaption class="pt-3 font-weight-bolder text-smaller">
                                                     PLACE ORDER</figcaption>
                                             </figure>

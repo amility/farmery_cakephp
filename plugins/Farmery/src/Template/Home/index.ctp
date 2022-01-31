@@ -2,7 +2,7 @@
 <section class="video-section section" style="background: url('/assets/site//images/placeholders/video/video.png') white no-repeat center center; background-size: cover">
     <div class="overlay"></div>
     <video playsinline="playsinline" muted="muted" loop="loop" id="hero-video">
-        <source src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'video/farmery_intro_video.mp4"'?> type="video/mp4">
+        <source src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/video/farmery_intro_video.mp4"'?> type="video/mp4">
     </video>
     <div class="container h-100">
         <div class="d-flex h-100 align-items-center">
@@ -31,7 +31,7 @@
         <div class="card mx-auto shadow w-100">
             <div class="row m-0">
                 <div class="col-md-6 col-xl-7 col-md-12 col-sm-12 col-xs-12 ">
-                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/abc.jpg'?>/farmer.png" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/about/farmer.png'" alt="Farmer image" class="farmer-img" width="90%" height="auto">
+                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/farmer.png'?>" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/about/farmer.png'" alt="Farmer image" class="farmer-img" width="90%" height="auto">
                 </div>
                 <div class="col-md-6 col-xl-5 col-md-12 col-sm-12 col-xs-12 px-0">
                     <div class="card-body pt-5">
@@ -115,10 +115,7 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/abc.jpg'?>
-
-
-img/Farm_002.jpg" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Farm_002.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>
@@ -127,10 +124,7 @@ img/Farm_002.jpg" alt="delivery card image" class="delivery-card-img" width="95%
                 <div class="delivery-card-style">
                     <div class="d-flex reverse-content">
                         <div class="col-xl-5 col-lg-5 col-12 text-right">
-                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/abc.jpg'?>
-
-
-FarmeryLab.jpg" alt="Lab image" class="delivery-card-img" width="95%" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/FarmeryLab.jpg'?>" alt="Lab image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                         <div class="col-xl-7 col-lg-7 col-12 pb-5  px-0">
                             <div class="d-flex">
@@ -175,10 +169,7 @@ FarmeryLab.jpg" alt="Lab image" class="delivery-card-img" width="95%" height="au
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/abc.jpg'?>
-
-
-img/FarmeryWebsiteHomepageFruitcategoryDeliveryvan557x385Artboar.jpg" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/FarmeryWebsiteHomepageFruitcategoryDeliveryvan557x385Artboar.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>

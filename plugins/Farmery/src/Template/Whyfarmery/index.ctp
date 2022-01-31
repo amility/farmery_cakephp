@@ -6,7 +6,7 @@
             <div class="w-55 video-container"
                 style="background: url('/assets/site//images/placeholders/backgrounds/section_first.png') white no-repeat center center; background-size: cover; background-color:transparent">
                 <video playsinline="playsinline" muted="muted" loop="loop" class="w-100 rounded"
-                    id="why-farmery-hero-video" poster="/assets/site//images/placeholders/video/video.png">
+                    id="why-farmery-hero-video">
                     <source src="video/farmery_intro_video.mp4" type="video/mp4">
                 </video>
                 <div class="play-pause">
@@ -283,8 +283,7 @@
                 <div class="col-lg-6 col-12">
                     <div class="video-container rounded mt-4"
                         style="background: url('/assets/site//images/placeholders/backgrounds/section_first.png') white no-repeat center center; background-size: cover; background-color: transparent">
-                        <video playsinline="playsinline" loop="loop" class="w-100 rounded" id="founder-msg-video"
-                            poster="/assets/site//images/placeholders/video/video.png">
+                        <video playsinline="playsinline" loop="loop" class="w-100 rounded" id="founder-msg-video">
                             <source src="video/MsgfromFounder.mp4" type="video/mp4">
                         </video>
                         <div class="play-pause">

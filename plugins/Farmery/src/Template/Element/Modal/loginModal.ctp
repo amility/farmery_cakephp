@@ -9,7 +9,7 @@
                         <div class="carousel-item active">
                             <div class="row m-0">
                                 <div class="col p-0 d-none d-md-block">
-                                    <img src="img/login_banner.png" width="100%" height="auto">
+                                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/login_banner.png';?>" width="100%" height="auto">
                                 </div>
                                 <div class="col">
                                     <button type="button" class="close pt-2 text-gray-300" data-dismiss="modal">
@@ -60,7 +60,7 @@
                         <div class="carousel-item">
                             <div class="row m-0">
                                 <div class="col p-0 d-none d-md-block">
-                                    <img src="img/login_banner.png" width="100%" height="auto">
+                                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/login_banner.png';?>" width="100%" height="auto">
                                 </div>
                                 <div class="col">
                                     <button type="button" class="close pt-2 text-gray-300" data-dismiss="modal">

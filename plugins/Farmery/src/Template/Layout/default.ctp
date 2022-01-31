@@ -44,7 +44,7 @@
     echo $this->Html->css(
         array(
             '/' . $pluginName . '/css/select2.css',
-            '/' . $pluginName . '/css/app.css',
+            '/' . $pluginName . '/css/app.css?v=1.1',
             '/' . $pluginName . '/css/header.css',
             '/' . $pluginName . '/css/main.css'
         )
@@ -239,11 +239,9 @@
                     '/' . $pluginName . '/js/header.js',
                     '/' . $pluginName . '/js/select2.js',
                     '/' . $pluginName . '/js/location.js',
+                    '/' . $pluginName . '/js/en.js',
                 )
         );
         ?>
-    <script type="text/javascript" src="files/select2.htm"></script>
-    <script async="" charset="UTF-8" src="js/en.js"></script>
 </body>
-
 </html>

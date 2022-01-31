@@ -204,9 +204,7 @@
                 <div class="w-95 d-flex justify-content-center">
                     <div class="video-container justify-content-center w-100 embed-responsive embed-responsive-16by9"
                         id="video">
-                        <iframe src="files/video.htm" style="border:none;overflow:hidden" scrolling="no"
-                            allowtransparency="true" allow="encrypted-media" allowfullscreen="true" width="734"
-                            height="734" frameborder="0"></iframe>
+                        <<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFarmeryFarmFresh%2Fvideos%2F774912639622668%2F&amp;show_text=false&amp;width=734&amp;height=734&amp;appId" width="734" height="734" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" allowfullscreen="true"></iframe>
                     </div>
                 </div>
             </div>

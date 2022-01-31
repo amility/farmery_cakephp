@@ -1,5 +1,5 @@
 <!-- section1 vedio -->
-<section class="video-section section" style="background: url('/assets/site//images/placeholders/video/video.png') white no-repeat center center; background-size: cover">
+<section class="video-section section">
     <div class="overlay"></div>
     <video playsinline="playsinline" muted="muted" loop="loop" id="hero-video">
         <source src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/video/farmery_intro_video.mp4"'?> type="video/mp4">
@@ -1139,7 +1139,7 @@
                     <hr>
                     <p class="my-3 font-weight-bold">What are your community people saying</p>
                     <div class="video-container embed-responsive embed-responsive-16by9">
-                        <iframe src="video/video.htm" style="border:none;overflow:hidden" scrolling="no" allowtransparency="true" allow="encrypted-media" allowfullscreen="true" width="734" height="734" frameborder="0"></iframe>
+                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFarmeryFarmFresh%2Fvideos%2F774912639622668%2F&amp;show_text=false&amp;width=734&amp;height=734&amp;appId" width="734" height="734" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" allowfullscreen="true"></iframe>
                     </div>
                     <div class="events-container">
                         <p class="my-3 font-weight-bold">Events</p>
@@ -1203,7 +1203,7 @@
                 <div class="col-xl-7 col-12 pb-4">
                     <div class="w-90 left-div-about-us">
                         <p class="page-sub-title text-lg-left text-center">What We Believe</p>
-                        <div class="video-container" style="background: url('/assets/site//images/placeholders/backgrounds/section_first.png') white no-repeat center center; background-size: cover; background-color: transparent">
+                        <div class="video-container" style="background:white no-repeat center center; background-size: cover; background-color: transparent">
                             <video playsinline="playsinline" muted="muted" loop="loop" class="w-100 rounded" id="about-us-video">
                                 <source src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/video/farmery_intro_video.mp4'?>" type="video/mp4">
                             </video>
@@ -1219,7 +1219,7 @@
                                             <div>
                                                 <div class="d-flex justify-content-center" style="width: 100%; display: inline-block;">
                                                     <div class="news-container">
-                                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/your_story.png'?>" class="w-100 align-self-center p-3 img-fluid" alt="Your Story">
+                                                        <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/your_story.png'?>" class="w-100 align-self-center p-3 img-fluid" alt="Your Story">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1337,7 +1337,7 @@
                                     <div class="py-5 d-flex justify-content-center" style="width: 100%; display: inline-block;">
                                         <div class="blog-card shadow rounded d-flex flex-column">
                                             <div class="justify-content-center d-flex">
-                                                <img class="card-img-top blog-img rounded" src="img/image-13.png" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/blog/blog.png'" alt="blog image">
+                                                <img class="card-img-top blog-img rounded" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/image-13.png';?>" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'" alt="blog image">
                                             </div>
                                             <div class="card-body p-4 overflow-hidden">
                                                 <h5 class="text-primary text-center font-weight-bolder border-bottom pb-3">
@@ -1371,7 +1371,7 @@
                                     <div class="py-5 d-flex justify-content-center" style="width: 100%; display: inline-block;">
                                         <div class="blog-card shadow rounded d-flex flex-column">
                                             <div class="justify-content-center d-flex">
-                                                <img class="card-img-top blog-img rounded" src="img/image-4.png" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/blog/blog.png'" alt="blog image">
+                                                <img class="card-img-top blog-img rounded" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/image-4.png';?>" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'" alt="blog image">
                                             </div>
                                             <div class="card-body p-4 overflow-hidden">
                                                 <h5 class="text-primary text-center font-weight-bolder border-bottom pb-3">
@@ -1405,7 +1405,7 @@
                                     <div class="py-5 d-flex justify-content-center" style="width: 100%; display: inline-block;">
                                         <div class="blog-card shadow rounded d-flex flex-column">
                                             <div class="justify-content-center d-flex">
-                                                <img class="card-img-top blog-img rounded" src="img/ZXfdESDPqgUqWzS1_CgjviWa1JwKqzDy4jEoB_k_zv8KMTXiE-2J5UG3aKJw.png" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/blog/blog.png'" alt="blog image">
+                                                <img class="card-img-top blog-img rounded" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/ZXfdESDPqgUqWzS1_CgjviWa1JwKqzDy4jEoB_k_zv8KMTXiE-2J5UG3aKJw.png';?>" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'" alt="blog image">
                                             </div>
                                             <div class="card-body p-4 overflow-hidden">
                                                 <h5 class="text-primary text-center font-weight-bolder border-bottom pb-3">

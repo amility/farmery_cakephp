@@ -227,7 +227,6 @@
         echo $this->Html->script(
                 array(
                     '/' . $pluginName . '/js/vendor.js',
-                    '/' . $pluginName . '/js/ajax-loading.js',
                     '/' . $pluginName . '/js/app.js',
                     '/' . $pluginName . '/js/cart.js',
                     '/' . $pluginName . '/js/products.js',

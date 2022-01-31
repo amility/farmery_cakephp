@@ -5,7 +5,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="https://www.farmery.in/">
-                <img src="img/logo_white.png" alt="Farmery Logo">
+                <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/logo_white.png'?>" alt="Farmery Logo">
             </a>
         </div>
         <div class="nav-links mobile-menu" id="nav-links">
@@ -122,15 +122,15 @@
             <ul class="navbar-nav">
                 <li class="nav-item position-relative">
                     <a href="wallet">
-                        <img src="img/wallet_white.svg" class="nav-icon img-icon">
+                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/wallet_white.svg'?>" class="nav-icon img-icon">
                     </a>
                 </li>
                 <li class="nav-item">
-                    <img src="img/basket_empty.png" class="nav-icon img-icon" alt="Basket" id="cart-icon">
+                    <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/basket_empty.png'?>" class="nav-icon img-icon" alt="Basket" id="cart-icon">
                     <div id="cart-badge" class="ml-4"></div>
                 </li>
                 <li class="nav-item">
-                    <img src="img/user.png" class="nav-icon img-icon" data-toggle="modal" data-target="#loginModal"
+                    <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/user.png'?>" class="nav-icon img-icon" data-toggle="modal" data-target="#loginModal"
                         alt="User">
                 </li>
                 <li class="nav-item">

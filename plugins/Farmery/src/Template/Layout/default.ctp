@@ -44,7 +44,7 @@
     echo $this->Html->css(
         array(
             '/' . $pluginName . '/css/select2.css',
-            '/' . $pluginName . '/css/app.css?v=1.1',
+            '/' . $pluginName . '/css/app.css?v=1.2',
             '/' . $pluginName . '/css/header.css',
             '/' . $pluginName . '/css/main.css'
         )

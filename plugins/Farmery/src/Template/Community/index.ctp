@@ -213,7 +213,7 @@
             <div class="ml-3 mt-5">
                 <p class="page-sub-title">Testimonials</p>
                 <div class="responsive-product-div">
-                    <img src="img/loader.png" class="w-100 responsive-product-img" width="100%" height="auto">
+                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>" class="w-100 responsive-product-img" width="100%" height="auto">
                 </div>
                 <div class="row m-0">
                     <div class="col-xl-7 col-md-12 col-sm-12 col-xs-12 col-12 p-0">
@@ -248,7 +248,7 @@
                     </div>
                     <div class="col-xl-5 side-img-outer-div">
                         <div class="side-img-div ml-3">
-                            <img src="img/loader.png" class="w-100 side-img" width="100%">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>" class="w-100 side-img" width="100%">
                         </div>
                     </div>
                 </div>

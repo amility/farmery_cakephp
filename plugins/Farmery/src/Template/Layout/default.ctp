@@ -86,11 +86,11 @@
                     <div class="text-left">
                         <h5>Payment</h5>
                         <div class="row m-0 pt-3 payment-methods">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/rupay.svg'?>" alt="Rupay" height="auto">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/mastercard.svg'?>" alt="Mastercard" height="auto">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/visa.svg'?>" alt="visa" height="auto">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/paytm.svg'?>" alt="Paytm" height="auto">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/cash.png'?>" alt="Freecharge" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/rupay.svg'?>" alt="Rupay" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/mastercard.svg'?>" alt="Mastercard" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/visa.svg'?>" alt="visa" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/paytm.svg'?>" alt="Paytm" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/cash.png'?>" alt="Freecharge" height="auto">
                         </div>
                         <div class="row m-0 pt-3 payment-modes">
                             <ul class="d-flex text-center">
@@ -208,9 +208,9 @@
                         <h6 class="pt-2">Download the App</h6>
                         <div>
                             <a href="https://apps.apple.com/us/app/farmery/id1414220360?ls=1" target="_blank">
-                                <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/app_store.svg'?>" alt="Apple Store" height="auto"></a>
+                                <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/app_store.svg'?>" alt="Apple Store" height="auto"></a>
                             <a href="https://play.google.com/store/apps/details?id=com.fudfill" target="_blank">
-                                <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/play_store.svg'?>" alt="Google Play Store" height="auto"></a>
+                                <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/play_store.svg'?>" alt="Google Play Store" height="auto"></a>
                         </div>
                     </div>
                 </div>
@@ -243,10 +243,6 @@
         );
         ?>
     <script type="text/javascript" src="files/select2.htm"></script>
-    <div id="ajaxLoading" style="display: none;position: fixed;top: 0;bottom: 0;left: 0;right: 0;margin: auto;padding: 8px;text-align: center;vertical-align: middle;width:85px;height:85px;z-index:1000;background:rgba(0, 0, 0, 0.7);border-radius:4px">
-        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png'?>" style="margin-bottom:8px;width:45px;height:45px">
-        <p style="margin:0;font-size:14px;color:#fff">Loading...</p>
-    </div>
     <script async="" charset="UTF-8" src="js/en.js"></script>
 </body>
 

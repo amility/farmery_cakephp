@@ -9,7 +9,7 @@
                         data-is-active="true" onclick="location.href='category';">
                         <div class="category-content">
                             <div class="card-body">
-                                <img class="img-fluid" src="img/24-09-2021-1960562808-1632469897.jpg" alt="Dairy">
+                                <img class="img-fluid" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/24-09-2021-1960562808-1632469897.jpg';?>" alt="Dairy">
                             </div>
                             <div class="card-footer">
                                 <p class="text-center font-weight-bold ">Dairy </p>
@@ -20,7 +20,7 @@
                         onclick="location.href='category';">
                         <div class="category-content">
                             <div class="card-body">
-                                <img class="img-fluid" src="img/07-09-2020-905775632-1599459537.jpg" alt="Fruits">
+                                <img class="img-fluid" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-905775632-1599459537.jpg';?>" alt="Fruits">
                             </div>
                             <div class="card-footer">
                                 <p class="text-center font-weight-normal ">Fruits </p>
@@ -31,7 +31,7 @@
                         onclick="location.href='category';">
                         <div class="category-content">
                             <div class="card-body">
-                                <img class="img-fluid" src="img/07-09-2020-674551994-1599459786.jpg" alt="Groceries">
+                                <img class="img-fluid" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-674551994-1599459786.jpg';?>" alt="Groceries">
                             </div>
                             <div class="card-footer">
                                 <p class="text-center font-weight-normal ">Groceries </p>
@@ -42,7 +42,7 @@
                         onclick="location.href='category';">
                         <div class="category-content">
                             <div class="card-body">
-                                <img class="img-fluid" src="img/07-09-2020-544433771-1599459886.jpg" alt="Vegetables">
+                                <img class="img-fluid" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-544433771-1599459886.jpg';?>" alt="Vegetables">
                             </div>
                             <div class="card-footer">
                                 <p class="text-center font-weight-normal ">Vegetables </p>
@@ -53,7 +53,7 @@
                         onclick="location.href='category';">
                         <div class="category-content">
                             <div class="card-body">
-                                <img class="img-fluid" src="img/07-09-2020-1456285336-1599472368.jpg" alt="Juices">
+                                <img class="img-fluid" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1456285336-1599472368.jpg';?>" alt="Juices">
                             </div>
                             <div class="card-footer">
                                 <p class="text-center font-weight-normal ">Juices </p>
@@ -64,7 +64,7 @@
                         onclick="location.href='category';">
                         <div class="category-content">
                             <div class="card-body">
-                                <img class="img-fluid" src="img/11-11-2021-606179505-1636623527.jpg" alt="Sweets">
+                                <img class="img-fluid" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/11-11-2021-606179505-1636623527.jpg';?>" alt="Sweets">
                             </div>
                             <div class="card-footer">
                                 <p class="text-center font-weight-normal ">Sweets </p>
@@ -87,8 +87,8 @@
                                 <span>Try Now</span>
                             </div>
                             <div class="card-image img-bright">
-                                <img src="img/07-09-2020-1693436879-1599462044.jpg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1693436879-1599462044.jpg';?>" class="rounded product-card-img "
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -140,7 +140,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/07-09-2020-1278165091-1599462346.jpg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -191,7 +191,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/02-11-2019-1754724739-1572637225.jpeg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -242,7 +242,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/07-09-2020-616575223-1599462204.jpg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -293,7 +293,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/24-04-2021-1681464444-1619286517.jpg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -344,7 +344,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/01-08-2020-145395073-1596305052.jpg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -396,7 +396,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/01-08-2020-760388550-1596305081.jpg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -448,7 +448,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/24-09-2021-2044586076-1632470124.jpg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -500,7 +500,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/13-09-2021-1120815394-1631513935.jpg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -552,7 +552,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/13-09-2021-1534064070-1631513758.jpg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -604,7 +604,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/30-11-2021-76806764-1638266008.png" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -656,7 +656,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/12-11-2021-1095301642-1636666464.jpeg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 
@@ -708,7 +708,7 @@
                             </div>
                             <div class="card-image img-bright">
                                 <img src="img/12-11-2021-100741573-1636668580.jpeg" class="rounded product-card-img "
-                                    alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                    alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                     width="100%">
                             </div>
 

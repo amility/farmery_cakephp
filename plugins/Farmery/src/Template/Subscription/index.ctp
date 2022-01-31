@@ -505,7 +505,7 @@
                     <div class="card mx-auto m-5">
                         <div class="card-image img-gray-scale">
                             <img src="img/07-09-2020-1693436879-1599462044.jpg" class="rounded product-card-img"
-                                alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                 width="100%">
                         </div>
                         <div class="card-body px-3 pt-3 pb-0">
@@ -538,7 +538,7 @@
                     <div class="card mx-auto m-5">
                         <div class="card-image img-gray-scale">
                             <img src="img/07-09-2020-1278165091-1599462346.jpg" class="rounded product-card-img"
-                                alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                 width="100%">
                         </div>
                         <div class="card-body px-3 pt-3 pb-0">
@@ -571,7 +571,7 @@
                     <div class="card mx-auto m-5">
                         <div class="card-image img-gray-scale">
                             <img src="img/02-11-2019-1754724739-1572637225.jpeg" class="rounded product-card-img"
-                                alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                 width="100%">
                         </div>
                         <div class="card-body px-3 pt-3 pb-0">
@@ -604,7 +604,7 @@
                     <div class="card mx-auto m-5">
                         <div class="card-image img-gray-scale">
                             <img src="img/07-09-2020-616575223-1599462204.jpg" class="rounded product-card-img"
-                                alt="image" onerror="this.onerror=null; this.src='/assets/site//images/loader.png'"
+                                alt="image" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>'"
                                 width="100%">
                         </div>
                         <div class="card-body px-3 pt-3 pb-0">

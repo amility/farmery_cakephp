@@ -1,4 +1,8 @@
 <!-- section1 vedio -->
+<?php 
+    if(!empty($displayBanners))
+    {
+?>
 <section class="section-home-image"
     style="background: white no-repeat center center; background-size: cover">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -9,7 +13,6 @@
             <?php foreach($displayBanners as $key => $displayBanner){?>
             <div class="carousel-item <?php if($key == 0){echo'active';}?>">
                 <img src="<?php echo $displayBanner['image'];?>" class="d-block w-100">
-
             </div>
            <?php } ?>
         </div>
@@ -23,8 +26,10 @@
         </a>
     </div>
 </section>
+<?php 
+    }
+    ?>
 <!-- section 1 ends -->
-
 <!-- Y Choose Farmery-->
 <section class="section section-full-height section-why-farmery-showcase down-anchor">
     <div class="d-flex rounded align-items-center h-100">

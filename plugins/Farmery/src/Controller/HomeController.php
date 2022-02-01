@@ -23,6 +23,7 @@ class HomeController extends AppController
         if(!empty($bannersData) && isset($bannersData['banners'])){
            $displayBanners = $bannersData['banners'];
         }
+        // print_r($displayBanners);exit;
         $this->set(compact('displayBanners'));
     }
 

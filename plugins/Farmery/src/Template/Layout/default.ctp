@@ -52,7 +52,7 @@
     ?>
 </head>
 
-<body style="padding-right: 17px;">
+<body>
     <b class="screen-overlay"></b>
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade

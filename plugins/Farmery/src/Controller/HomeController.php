@@ -34,26 +34,28 @@ class HomeController extends AppController
         $hub_id = 2; // TODO later we can make it dynemic
         $limit = 5;
         $productCategoryResult = array();
-        // foreach ($categories['data'] as $category) {
-        //     $productCategories = $this->Service->post('getCatalogByCategory', ['category_id' => $category['id'], 'hub_id' => $hub_id]);
-        //     $productInfo = array();
-        //     $i = 0;
-        //     if(!empty($productCategories) && isset($productCategories['data']['products']))
-        //     {
-        //         foreach ($productCategories['data']['products']['data'] as $product) {
-        //             $productInfo[$i]['id'] = $product['product_id'];
-        //             $productInfo[$i]['product_name'] = $product['product_name'];
-        //             $productInfo[$i]['product_image'] = $product['product_image'];
-        //             $productInfo[$i]['type'] = $product['type'];
-        //             $i++;
-        //             if ($i >= $limit) {
-        //                 break;
-        //             }
-        //         }
-        //     }
-        //     $productCategoryResult[$category['id']] = $productInfo;
-        // }
-        $this->set(compact('displayBanners','categories'));
+        foreach ($categories['data'] as $category) {
+            $productCategories = $this->Service->post('getCatalogByCategory', ['category_id' => $category['id'], 'hub_id' => $hub_id]);
+            $productInfo = array();
+            $i = 0;
+            if(!empty($productCategories) && isset($productCategories['data']['products']))
+            {
+                foreach ($productCategories['data']['products']['data'] as $product) {
+                    $productInfo[$i]['id'] = $product['product_id'];
+                    $productInfo[$i]['product_name'] = $product['product_name'];
+                    $productInfo[$i]['product_image'] = $product['product_image'];
+                    $productInfo[$i]['type'] = $product['type'];
+                    $i++;
+                    if ($i >= $limit) {
+                        break;
+                    }
+                }
+            }
+            $productCategoryResult[$category['id']] = $productInfo;
+        }
+        // print_r($productCategoryResult);exit;
+
+        $this->set(compact('displayBanners','categories','productCategoryResult'));
     }
 
     /**

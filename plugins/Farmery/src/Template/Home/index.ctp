@@ -3,8 +3,7 @@
     if(!empty($displayBanners))
     {
 ?>
-<section class="section-home-image"
-    style="background: white no-repeat center center; background-size: cover">
+<section class="section-home-image" style="background: white no-repeat center center; background-size: cover">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -14,7 +13,7 @@
             <div class="carousel-item <?php if($key == 0){echo'active';}?>">
                 <img src="<?php echo $displayBanner['image'];?>" class="d-block w-100">
             </div>
-           <?php } ?>
+            <?php } ?>
         </div>
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"> </span>
@@ -36,7 +35,9 @@
         <div class="card mx-auto shadow w-100">
             <div class="row m-0">
                 <div class="col-md-6 col-xl-7 col-md-12 col-sm-12 col-xs-12 ">
-                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/farmer.png'?>" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/about/farmer.png'" alt="Farmer image" class="farmer-img" width="90%" height="auto">
+                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/farmer.png'?>"
+                        onerror="this.onerror=null; this.src='/assets/site//images/placeholders/about/farmer.png'"
+                        alt="Farmer image" class="farmer-img" width="90%" height="auto">
                 </div>
                 <div class="col-md-6 col-xl-5 col-md-12 col-sm-12 col-xs-12 px-0">
                     <div class="card-body pt-5">
@@ -57,7 +58,8 @@
                                 we look to bringing more farm fresh products to your dining table.</p>
                             <p></p>
                         </div>
-                        <a href="whyFarmery" class="btn btn-lg btn-secondary mt-2" role="button" aria-pressed="true">Know More</a><span class="arrow"></span>
+                        <a href="whyFarmery" class="btn btn-lg btn-secondary mt-2" role="button"
+                            aria-pressed="true">Know More</a><span class="arrow"></span>
                     </div>
                 </div>
             </div>
@@ -120,7 +122,8 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Farm_002.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Farm_002.jpg'?>"
+                                alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>
@@ -129,7 +132,8 @@
                 <div class="delivery-card-style">
                     <div class="d-flex reverse-content">
                         <div class="col-xl-5 col-lg-5 col-12 text-right">
-                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/FarmeryLab.jpg'?>" alt="Lab image" class="delivery-card-img" width="95%" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/FarmeryLab.jpg'?>"
+                                alt="Lab image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                         <div class="col-xl-7 col-lg-7 col-12 pb-5  px-0">
                             <div class="d-flex">
@@ -174,7 +178,8 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/FarmeryWebsiteHomepageFruitcategoryDeliveryvan557x385Artboar.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/FarmeryWebsiteHomepageFruitcategoryDeliveryvan557x385Artboar.jpg'?>"
+                                alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>
@@ -210,7 +215,8 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Farm2_002.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Farm2_002.jpg'?>"
+                                alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>
@@ -219,7 +225,8 @@
                 <div class="delivery-card-style">
                     <div class="d-flex reverse-content">
                         <div class="col-xl-5 col-lg-5 col-12 text-right">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Quality-Control.jpg'?>" alt="Lab image" class="delivery-card-img" width="95%" height="auto">
+                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Quality-Control.jpg'?>"
+                                alt="Lab image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                         <div class="col-xl-7 col-lg-7 col-12 pb-5  px-0">
                             <div class="d-flex">
@@ -264,7 +271,8 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/delivery.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/delivery.jpg'?>"
+                                alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>
@@ -298,7 +306,8 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Farm.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Farm.jpg'?>"
+                                alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>
@@ -307,7 +316,8 @@
                 <div class="delivery-card-style">
                     <div class="d-flex reverse-content">
                         <div class="col-xl-5 col-lg-5 col-12 text-right">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Quality.jpg'?>" alt="Lab image" class="delivery-card-img" width="95%" height="auto">
+                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Quality.jpg'?>"
+                                alt="Lab image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                         <div class="col-xl-7 col-lg-7 col-12 pb-5  px-0">
                             <div class="d-flex">
@@ -350,7 +360,8 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/grocery.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/grocery.jpg'?>"
+                                alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>
@@ -383,7 +394,8 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Farm2.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Farm2.jpg'?>"
+                                alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>
@@ -392,7 +404,8 @@
                 <div class="delivery-card-style">
                     <div class="d-flex reverse-content">
                         <div class="col-xl-5 col-lg-5 col-12 text-right">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Quality_002.jpg'?>" alt="Lab image" class="delivery-card-img" width="95%" height="auto">
+                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Quality_002.jpg'?>"
+                                alt="Lab image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                         <div class="col-xl-7 col-lg-7 col-12 pb-5  px-0">
                             <div class="d-flex">
@@ -437,7 +450,8 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/delivery.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/delivery.jpg'?>"
+                                alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>
@@ -470,7 +484,8 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Product.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Product.jpg'?>"
+                                alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>
@@ -479,7 +494,8 @@
                 <div class="delivery-card-style">
                     <div class="d-flex reverse-content">
                         <div class="col-xl-5 col-lg-5 col-12 text-right">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/production.jpg'?>" alt="Lab image" class="delivery-card-img" width="95%" height="auto">
+                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/production.jpg'?>"
+                                alt="Lab image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                         <div class="col-xl-7 col-lg-7 col-12 pb-5  px-0">
                             <div class="d-flex">
@@ -522,7 +538,8 @@
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-5 col-12">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/FarmeryWebsiteHomepageFruitcategoryDeliveryvan557x385Artboar.jpg'?>" alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
+                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/FarmeryWebsiteHomepageFruitcategoryDeliveryvan557x385Artboar.jpg'?>"
+                                alt="delivery card image" class="delivery-card-img" width="95%" height="auto">
                         </div>
                     </div>
                 </div>
@@ -541,9 +558,11 @@
     <div class="d-flex justify-content-center">
         <div class="d-flex category-buckets justify-content-between">
             <?php foreach($categories['data'] as $category){?>
-            <div class="card category-card mx-auto p-xl-4 p-md-2" data-id="<?php echo $category['id']?>">
+            <div class="card category-card mx-auto p-xl-4 p-md-2"
+                data-target="product-listing-<?php echo $category['id']?>">
                 <div class="card-body">
-                    <img class="img-fluid" src="<?php echo $category['category_image']?>" alt="<?php echo $category['name']?>">
+                    <img class="img-fluid" src="<?php echo $category['category_image']?>"
+                        alt="<?php echo $category['name']?>">
                 </div>
                 <div class="card-footer">
                     <p class="text-center text-larger"><?php echo $category['name']?></p>
@@ -552,88 +571,43 @@
             <?php } ?>
         </div>
         <div class="products-container d-flex justify-content-center">
-            <div class="d-flex products-list justify-content-center" id="product-listing-1">
+            <?php foreach($categories['data'] as $category){?>
+            <div class="d-flex products-list justify-content-center" id="product-listing-<?php echo $category['id']?>">
+                <?php foreach($productCategoryResult[$category['id']] as $product){?>
                 <div class="d-flex justify-content-center px-3">
                     <div class="card product-card justify-content-between">
                         <div class="card-img-top">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/24-04-2021-1681464444-1619286517.jpg'?>" alt="Buttermilk Subscription">
+                            <img src="<?php echo $product['product_image']; ?>" alt="<?php echo $product['product_name']; ?>">
                         </div>
                         <div class="card-footer">
                             <p class="card-text">
-                                <a href="subscription">Buttermilk
-                                    Subscription</a>
+                                <a
+                                    href="subscription"><?php echo $product['product_name']; ?></a>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center px-3">
-                    <div class="card product-card justify-content-between">
-                        <div class="card-img-top">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-616575223-1599462204.jpg'?>" alt="Desi Cow Milk Subscription">
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text">
-                                <a href="subscription">Desi
-                                    Cow Milk Subscription</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center px-3">
-                    <div class="card product-card justify-content-between">
-                        <div class="card-img-top">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/02-11-2019-1754724739-1572637225.jpeg'?>" alt="Probiotic Curd (200 gms) Subscription">
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text">
-                                <a href="subscription">Probiotic
-                                    Curd (200 gms) Subscription</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center px-3">
-                    <div class="card product-card justify-content-between">
-                        <div class="card-img-top">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1278165091-1599462346.jpg'?>" alt="Buffalo Milk - Bottle Subscription">
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text">
-                                <a href="subscription">Buffalo
-                                    Milk - Bottle Subscription</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center px-3">
-                    <div class="card product-card justify-content-between">
-                        <div class="card-img-top">
-                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1693436879-1599462044.jpg'?>" alt="Cow Milk - Bottle Subscription">
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text">
-                                <a href="subscription">Cow
-                                    Milk - Bottle Subscription</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
                 <div class="px-3 d-flex justify-content-center">
                     <div class="card see-more-card">
                         <div class="card-body d-flex justify-content-center align-items-center">
-                            <a class="font-weight-bold" onclick="window.location='category'">
+                            <a class="font-weight-bold"
+                                onclick="window.location='category'">
                                 See All
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php } ?>
+
         </div>
     </div>
     <div class="mobile-contents">
         <div class="w-85 d-flex justify-content-center">
             <div class="img-div">
-                <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/products_mobile.png'?>" class="w-100 rounded" height="auto">
+                <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/products_mobile.png'?>"
+                    class="w-100 rounded" height="auto">
             </div>
         </div>
         <div class="background-style rounded"></div>
@@ -652,121 +626,152 @@
     <div class="d-flex justify-content-center">
         <div class="carousel-container bg-twin-primary-light">
             <div class="carousel slide pointer-event" data-ride="carousel">
-                <div class="featured-communities slick-initialized slick-slider"><button type="button" class="is-left slick-prev slick-arrow slick-disabled" aria-disabled="true" style=""><i class="fa fa-angle-left angle-style" aria-hidden="true"></i></button>
+                <div class="featured-communities slick-initialized slick-slider"><button type="button"
+                        class="is-left slick-prev slick-arrow slick-disabled" aria-disabled="true" style=""><i
+                            class="fa fa-angle-left angle-style" aria-hidden="true"></i></button>
                     <div class="slick-list draggable">
-                        <div class="slick-track" style="opacity: 1; width: 2421px; transform: translate3d(0px, 0px, 0px);">
-                            <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 269px;">
+                        <div class="slick-track"
+                            style="opacity: 1; width: 2421px; transform: translate3d(0px, 0px, 0px);">
+                            <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false"
+                                style="width: 269px;">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">
                                         <div class="card-img-top">
-                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-621901142-1599462802.jpg'?>" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-621901142-1599462802.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
                                         </div>
                                         <div class="card-footer">
-                                            <a class="pt-4 h5 text-capitalize stretched-link community-link" data-target="Ghaziabad" tabindex="0">Ghaziabad</a>
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="Ghaziabad" tabindex="0">Ghaziabad</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 269px;">
+                            <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false"
+                                style="width: 269px;">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">
                                         <div class="card-img-top">
-                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1245012783-1599462878.jpg'?>" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1245012783-1599462878.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
                                         </div>
                                         <div class="card-footer">
-                                            <a class="pt-4 h5 text-capitalize stretched-link community-link" data-target="New Gurgaon" tabindex="0">New Gurgaon</a>
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="New Gurgaon" tabindex="0">New Gurgaon</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 269px;">
+                            <div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false"
+                                style="width: 269px;">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">
                                         <div class="card-img-top">
-                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-528143318-1599462955.jpg'?>" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-528143318-1599462955.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
                                         </div>
                                         <div class="card-footer">
-                                            <a class="pt-4 h5 text-capitalize stretched-link community-link" data-target="Old Gurgaon" tabindex="0">Old Gurgaon</a>
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="Old Gurgaon" tabindex="0">Old Gurgaon</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slick-slide slick-active" data-slick-index="3" aria-hidden="false" style="width: 269px;">
+                            <div class="slick-slide slick-active" data-slick-index="3" aria-hidden="false"
+                                style="width: 269px;">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">
                                         <div class="card-img-top">
-                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1250844290-1599463027.jpg'?>" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1250844290-1599463027.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
                                         </div>
                                         <div class="card-footer">
-                                            <a class="pt-4 h5 text-capitalize stretched-link community-link" data-target="Noida" tabindex="0">Noida</a>
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="Noida" tabindex="0">Noida</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slick-slide" data-slick-index="4" aria-hidden="true" style="width: 269px;" tabindex="-1">
+                            <div class="slick-slide" data-slick-index="4" aria-hidden="true" style="width: 269px;"
+                                tabindex="-1">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">
                                         <div class="card-img-top">
-                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-622278358-1599463089.jpg'?>" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-622278358-1599463089.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
                                         </div>
                                         <div class="card-footer">
-                                            <a class="pt-4 h5 text-capitalize stretched-link community-link" data-target="South Delhi " tabindex="-1">South Delhi </a>
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="South Delhi " tabindex="-1">South Delhi </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slick-slide" data-slick-index="5" aria-hidden="true" style="width: 269px;" tabindex="-1">
+                            <div class="slick-slide" data-slick-index="5" aria-hidden="true" style="width: 269px;"
+                                tabindex="-1">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">
                                         <div class="card-img-top">
-                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-2117151287-1599463153.jpg'?>" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-2117151287-1599463153.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
                                         </div>
                                         <div class="card-footer">
-                                            <a class="pt-4 h5 text-capitalize stretched-link community-link" data-target="South Delhi   2" tabindex="-1">South Delhi
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="South Delhi   2" tabindex="-1">South Delhi
                                                 2</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slick-slide" data-slick-index="6" aria-hidden="true" style="width: 269px;" tabindex="-1">
+                            <div class="slick-slide" data-slick-index="6" aria-hidden="true" style="width: 269px;"
+                                tabindex="-1">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">
                                         <div class="card-img-top">
-                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-957758512-1599463201.jpg'?>" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-957758512-1599463201.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
                                         </div>
                                         <div class="card-footer">
-                                            <a class="pt-4 h5 text-capitalize stretched-link community-link" data-target="South West Delhi" tabindex="-1">South West
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="South West Delhi" tabindex="-1">South West
                                                 Delhi</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slick-slide" data-slick-index="7" aria-hidden="true" style="width: 269px;" tabindex="-1">
+                            <div class="slick-slide" data-slick-index="7" aria-hidden="true" style="width: 269px;"
+                                tabindex="-1">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">
                                         <div class="card-img-top">
-                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1502062021-1599463349.png'?>" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1502062021-1599463349.png'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
                                         </div>
                                         <div class="card-footer">
-                                            <a class="pt-4 h5 text-capitalize stretched-link community-link" data-target="Greater Noida" tabindex="-1">Greater Noida</a>
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="Greater Noida" tabindex="-1">Greater Noida</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slick-slide" data-slick-index="8" aria-hidden="true" style="width: 269px;" tabindex="-1">
+                            <div class="slick-slide" data-slick-index="8" aria-hidden="true" style="width: 269px;"
+                                tabindex="-1">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">
                                         <div class="card-img-top">
-                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/10-12-2021-243401253-1639118695.jpg'?>" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/10-12-2021-243401253-1639118695.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
                                         </div>
                                         <div class="card-footer">
-                                            <a class="pt-4 h5 text-capitalize stretched-link community-link" data-target="Meerut" tabindex="-1">Meerut</a>
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="Meerut" tabindex="-1">Meerut</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div><button type="button" class="is-right slick-next slick-arrow" style="" aria-disabled="false"><i class="fa fa-angle-right angle-style" aria-hidden="true"></i></button>
+                    </div><button type="button" class="is-right slick-next slick-arrow" style=""
+                        aria-disabled="false"><i class="fa fa-angle-right angle-style" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
@@ -781,7 +786,10 @@
         <div class="col-xl-7  col-12 community-info ">
             <div class="community-description">
                 <div class="card-img-top">
-                    <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-621901142-1599462802.jpg'?>" id="selected-community-image" onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'" class="border">
+                    <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-621901142-1599462802.jpg'?>"
+                        id="selected-community-image"
+                        onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
+                        class="border">
                 </div>
                 <div class="card-body pt-5">
                     <p class="h3 font-weight-bolder" id="selected-community-name">Ghaziabad</p>
@@ -789,7 +797,8 @@
                         outskirts of Delhi, Ghaziabad is an old settlement with people from all
                         across Uttar Pradesh staying here because of its proximity to Delhi. The
                         area has its unique appeal with old settlers calling it their home. </p>
-                    <button class="btn btn-lg btn-secondary" id="selected-community-link" onclick="window.location='community'">
+                    <button class="btn btn-lg btn-secondary" id="selected-community-link"
+                        onclick="window.location='community'">
                         Explore
                     </button>
                 </div>
@@ -803,7 +812,8 @@
                             <div class="community-stat-card">
                                 <div class="card-body">
                                     <p class="stat-value font-weight-bold text-larger">
-                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/active_customers.png'?>" alt="community_active_customers" width="40%">
+                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/active_customers.png'?>"
+                                            alt="community_active_customers" width="40%">
                                         <span id="selected-community-active-customers">18547</span>
                                     </p>
                                 </div>
@@ -818,7 +828,8 @@
                             <div class="community-stat-card">
                                 <div class="card-body">
                                     <p class="stat-value font-weight-bold text-larger">
-                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/points_earned.png'?>" alt="community_points_earned" width="30%">
+                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/points_earned.png'?>"
+                                            alt="community_points_earned" width="30%">
                                         <span id="selected-community-deliveries">851093</span>
                                     </p>
                                 </div>
@@ -833,11 +844,15 @@
                     <hr>
                     <p class="my-3 font-weight-bold">What are your community people saying</p>
                     <div class="video-container embed-responsive embed-responsive-16by9">
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFarmeryFarmFresh%2Fvideos%2F774912639622668%2F&amp;show_text=false&amp;width=734&amp;height=734&amp;appId" width="734" height="734" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" allowfullscreen="true"></iframe>
+                        <iframe
+                            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFarmeryFarmFresh%2Fvideos%2F774912639622668%2F&amp;show_text=false&amp;width=734&amp;height=734&amp;appId"
+                            width="734" height="734" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowtransparency="true" allow="encrypted-media" allowfullscreen="true"></iframe>
                     </div>
                     <div class="events-container">
                         <p class="my-3 font-weight-bold">Events</p>
-                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/farms.jpg'?>" class="w-100" height="auto">
+                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/farms.jpg'?>"
+                            class="w-100" height="auto">
                         <div class="events">
                             <div id="farmEvents" class="carousel slide pointer-event" data-ride="carousel">
                                 <div class="carousel-inner">
@@ -875,7 +890,8 @@
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-flex justify-content-center">
                 <div class="w-80 align-self-center">
-                    <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Banner-to-edit-cut.jpg'?>" style="width:300px !important;">
+                    <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Banner-to-edit-cut.jpg'?>"
+                        style="width:300px !important;">
                 </div>
             </div>
         </div>
@@ -897,56 +913,82 @@
                 <div class="col-xl-7 col-12 pb-4">
                     <div class="w-90 left-div-about-us">
                         <p class="page-sub-title text-lg-left text-center">What We Believe</p>
-                        <div class="video-container" style="background:white no-repeat center center; background-size: cover; background-color: transparent">
-                            <video playsinline="playsinline" muted="muted" loop="loop" class="w-100 rounded" id="about-us-video">
-                                <source src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/video/farmery_intro_video.mp4'?>" type="video/mp4">
+                        <div class="video-container"
+                            style="background:white no-repeat center center; background-size: cover; background-color: transparent">
+                            <video playsinline="playsinline" muted="muted" loop="loop" class="w-100 rounded"
+                                id="about-us-video">
+                                <source
+                                    src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/video/farmery_intro_video.mp4'?>"
+                                    type="video/mp4">
                             </video>
                             <div class="play-pause">
-                                <a data-target="about-us-video" class="video-control"><i class="fa fa-play fa-2x"></i></a>
+                                <a data-target="about-us-video" class="video-control"><i
+                                        class="fa fa-play fa-2x"></i></a>
                             </div>
                         </div>
                         <div class="carousel slide mt-4 mb-5 pointer-event" data-ride="carousel">
-                            <div class="featured-news slick-initialized slick-slider"><button type="button" class="is-left slick-prev slick-arrow slick-disabled" aria-disabled="true" style=""><i class="fa fa-angle-left angle-style" aria-hidden="true"></i></button>
+                            <div class="featured-news slick-initialized slick-slider"><button type="button"
+                                    class="is-left slick-prev slick-arrow slick-disabled" aria-disabled="true"
+                                    style=""><i class="fa fa-angle-left angle-style" aria-hidden="true"></i></button>
                                 <div class="slick-list draggable">
-                                    <div class="slick-track" style="opacity: 1; width: 700px; transform: translate3d(0px, 0px, 0px);">
-                                        <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 175px;">
+                                    <div class="slick-track"
+                                        style="opacity: 1; width: 700px; transform: translate3d(0px, 0px, 0px);">
+                                        <div class="slick-slide slick-current slick-active" data-slick-index="0"
+                                            aria-hidden="false" style="width: 175px;">
                                             <div>
-                                                <div class="d-flex justify-content-center" style="width: 100%; display: inline-block;">
+                                                <div class="d-flex justify-content-center"
+                                                    style="width: 100%; display: inline-block;">
                                                     <div class="news-container">
-                                                        <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/your_story.png'?>" class="w-100 align-self-center p-3 img-fluid" alt="Your Story">
+                                                        <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/your_story.png'?>"
+                                                            class="w-100 align-self-center p-3 img-fluid"
+                                                            alt="Your Story">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 175px;">
+                                        <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false"
+                                            style="width: 175px;">
                                             <div>
-                                                <div class="d-flex justify-content-center" style="width: 100%; display: inline-block;">
+                                                <div class="d-flex justify-content-center"
+                                                    style="width: 100%; display: inline-block;">
                                                     <div class="news-container">
-                                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/entrepreneur.png'?>" class="w-100 align-self-center p-3 img-fluid" alt="Your Story">
+                                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/entrepreneur.png'?>"
+                                                            class="w-100 align-self-center p-3 img-fluid"
+                                                            alt="Your Story">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 175px;">
+                                        <div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false"
+                                            style="width: 175px;">
                                             <div>
-                                                <div class="d-flex justify-content-center" style="width: 100%; display: inline-block;">
+                                                <div class="d-flex justify-content-center"
+                                                    style="width: 100%; display: inline-block;">
                                                     <div class="news-container">
-                                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/india_today.png'?>" class="w-100 align-self-center p-3 img-fluid" alt="Your Story">
+                                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/india_today.png'?>"
+                                                            class="w-100 align-self-center p-3 img-fluid"
+                                                            alt="Your Story">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="slick-slide" data-slick-index="3" aria-hidden="true" style="width: 175px;" tabindex="-1">
+                                        <div class="slick-slide" data-slick-index="3" aria-hidden="true"
+                                            style="width: 175px;" tabindex="-1">
                                             <div>
-                                                <div class="d-flex justify-content-center" style="width: 100%; display: inline-block;">
+                                                <div class="d-flex justify-content-center"
+                                                    style="width: 100%; display: inline-block;">
                                                     <div class="news-container">
-                                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/your_story.png'?>" class="w-100 align-self-center p-3 img-fluid" alt="Your Story">
+                                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/your_story.png'?>"
+                                                            class="w-100 align-self-center p-3 img-fluid"
+                                                            alt="Your Story">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div><button type="button" class="is-right slick-next slick-arrow" style="" aria-disabled="false"><i class="fa fa-angle-right angle-style" aria-hidden="true"></i></button>
+                                </div><button type="button" class="is-right slick-next slick-arrow" style=""
+                                    aria-disabled="false"><i class="fa fa-angle-right angle-style"
+                                        aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
@@ -956,7 +998,9 @@
                     <div class="rounded shadow bg-white mb-5">
                         <div class="row m-0 pt-2">
                             <div class="col-xl-5 col-lg-5 col-md-5 col-12 text-center">
-                                <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/06-09-2020-1420573057-1599382294.jpg'?>" onerror="this.onerror=null; this.src='/assets/site//images/homepage/trial.jpg'" class="rounded-circle testimonial-img">
+                                <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/06-09-2020-1420573057-1599382294.jpg'?>"
+                                    onerror="this.onerror=null; this.src='/assets/site//images/homepage/trial.jpg'"
+                                    class="rounded-circle testimonial-img">
                                 <p class="mb-0 pt-2 font-weight-bolder">Khan Boyka</p>
                                 <p>10 months ago</p>
                             </div>
@@ -979,7 +1023,9 @@
                     <div class="rounded shadow bg-white mb-5">
                         <div class="row m-0 pt-2">
                             <div class="col-xl-5 col-lg-5 col-md-5 col-12 text-center">
-                                <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/trial.jpg'?>" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/trial.jpg'?>'" class="rounded-circle testimonial-img">
+                                <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/trial.jpg'?>"
+                                    onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/trial.jpg'?>'"
+                                    class="rounded-circle testimonial-img">
                                 <p class="mb-0 pt-2 font-weight-bolder">Aashu</p>
                                 <p>1 year ago</p>
                             </div>
@@ -1025,16 +1071,23 @@
             <div class="carousel slide pointer-event" data-ride="carousel">
                 <div class="featured-blogs slick-initialized slick-slider">
                     <div class="slick-list draggable">
-                        <div class="slick-track" style="opacity: 1; width: 1200px; transform: translate3d(0px, 0px, 0px);">
-                            <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 400px;">
+                        <div class="slick-track"
+                            style="opacity: 1; width: 1200px; transform: translate3d(0px, 0px, 0px);">
+                            <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false"
+                                style="width: 400px;">
                                 <div>
-                                    <div class="py-5 d-flex justify-content-center" style="width: 100%; display: inline-block;">
+                                    <div class="py-5 d-flex justify-content-center"
+                                        style="width: 100%; display: inline-block;">
                                         <div class="blog-card shadow rounded d-flex flex-column">
                                             <div class="justify-content-center d-flex">
-                                                <img class="card-img-top blog-img rounded" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/image-13.png';?>" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'" alt="blog image">
+                                                <img class="card-img-top blog-img rounded"
+                                                    src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/image-13.png';?>"
+                                                    onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'"
+                                                    alt="blog image">
                                             </div>
                                             <div class="card-body p-4 overflow-hidden">
-                                                <h5 class="text-primary text-center font-weight-bolder border-bottom pb-3">
+                                                <h5
+                                                    class="text-primary text-center font-weight-bolder border-bottom pb-3">
                                                     Learn at Play!</h5>
                                                 <p class="card-text d-flex pt-3"></p>
                                                 <blockquote>Kids are curious
@@ -1052,7 +1105,8 @@
                                                 <small class="text-muted">2 years ago</small>
                                                 <small class="text-muted hide-on-mobile d-none d-md-block">Harshita
                                                     Jain</small>
-                                                <a href="https://blog.farmery.in/learn-at-play-2/" target="_blank" tabindex="0">
+                                                <a href="https://blog.farmery.in/learn-at-play-2/" target="_blank"
+                                                    tabindex="0">
                                                     <small class="text-muted">Read More...</small>
                                                 </a>
                                             </div>
@@ -1060,15 +1114,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 400px;">
+                            <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false"
+                                style="width: 400px;">
                                 <div>
-                                    <div class="py-5 d-flex justify-content-center" style="width: 100%; display: inline-block;">
+                                    <div class="py-5 d-flex justify-content-center"
+                                        style="width: 100%; display: inline-block;">
                                         <div class="blog-card shadow rounded d-flex flex-column">
                                             <div class="justify-content-center d-flex">
-                                                <img class="card-img-top blog-img rounded" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/image-4.png';?>" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'" alt="blog image">
+                                                <img class="card-img-top blog-img rounded"
+                                                    src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/image-4.png';?>"
+                                                    onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'"
+                                                    alt="blog image">
                                             </div>
                                             <div class="card-body p-4 overflow-hidden">
-                                                <h5 class="text-primary text-center font-weight-bolder border-bottom pb-3">
+                                                <h5
+                                                    class="text-primary text-center font-weight-bolder border-bottom pb-3">
                                                     Help your child choose the best!</h5>
                                                 <p class="card-text d-flex pt-3"></p>
                                                 <blockquote>As parents, we want
@@ -1086,7 +1146,8 @@
                                                 <small class="text-muted">2 years ago</small>
                                                 <small class="text-muted hide-on-mobile d-none d-md-block">Harshita
                                                     Jain</small>
-                                                <a href="https://blog.farmery.in/help-your-child-choose-the-best/" target="_blank" tabindex="0">
+                                                <a href="https://blog.farmery.in/help-your-child-choose-the-best/"
+                                                    target="_blank" tabindex="0">
                                                     <small class="text-muted">Read More...</small>
                                                 </a>
                                             </div>
@@ -1094,15 +1155,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 400px;">
+                            <div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false"
+                                style="width: 400px;">
                                 <div>
-                                    <div class="py-5 d-flex justify-content-center" style="width: 100%; display: inline-block;">
+                                    <div class="py-5 d-flex justify-content-center"
+                                        style="width: 100%; display: inline-block;">
                                         <div class="blog-card shadow rounded d-flex flex-column">
                                             <div class="justify-content-center d-flex">
-                                                <img class="card-img-top blog-img rounded" src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/ZXfdESDPqgUqWzS1_CgjviWa1JwKqzDy4jEoB_k_zv8KMTXiE-2J5UG3aKJw.png';?>" onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'" alt="blog image">
+                                                <img class="card-img-top blog-img rounded"
+                                                    src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/ZXfdESDPqgUqWzS1_CgjviWa1JwKqzDy4jEoB_k_zv8KMTXiE-2J5UG3aKJw.png';?>"
+                                                    onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'"
+                                                    alt="blog image">
                                             </div>
                                             <div class="card-body p-4 overflow-hidden">
-                                                <h5 class="text-primary text-center font-weight-bolder border-bottom pb-3">
+                                                <h5
+                                                    class="text-primary text-center font-weight-bolder border-bottom pb-3">
                                                     Baked Paneer Pops: Where health meets deliciousness!
                                                 </h5>
                                                 <p class="card-text d-flex pt-3"></p>
@@ -1120,7 +1187,8 @@
                                                 <small class="text-muted">2 years ago</small>
                                                 <small class="text-muted hide-on-mobile d-none d-md-block">Harshita
                                                     Jain</small>
-                                                <a href="https://blog.farmery.in/baked-paneer-pops-where-health-meets-deliciousness/" target="_blank" tabindex="0">
+                                                <a href="https://blog.farmery.in/baked-paneer-pops-where-health-meets-deliciousness/"
+                                                    target="_blank" tabindex="0">
                                                     <small class="text-muted">Read More...</small>
                                                 </a>
                                             </div>

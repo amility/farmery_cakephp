@@ -1,4 +1,5 @@
 <?php
+
 namespace Farmery\Controller;
 
 use Farmery\Controller\AppController;
@@ -18,13 +19,43 @@ class HomeController extends AppController
      */
     public function index()
     {
-        $bannersData=$this->Service->post('getHomePageBanners');
+        $bannersData = $this->Service->post('getHomePageBanners');
         $displayBanners = [];
-        if(!empty($bannersData) && isset($bannersData['banners'])){
-           $displayBanners = $bannersData['banners'];
+        if (!empty($bannersData) && isset($bannersData['banners'])) {
+            $displayBanners = $bannersData['banners'];
         }
         // print_r($displayBanners);exit;
-        $this->set(compact('displayBanners'));
+
+
+        /**
+         * get categories
+         */
+        $categories = $this->Service->post('getProductCategories');
+        
+        $hub_id = 2; // TODO later we can make it dynemic
+        $limit = 5;
+        $productCategoryResult = array();
+        foreach ($categories['data'] as $category) {
+            $productCategories = $this->Service->post('getCatalogByCategory', ['category_id' => $category['id'], 'hub_id' => $hub_id]);
+            $productInfo = array();
+            $i = 0;
+            if(!empty($productCategories) && isset($productCategories['data']['products']))
+            {
+                foreach ($productCategories['data']['products']['data'] as $product) {
+                    $productInfo[$i]['id'] = $product['product_id'];
+                    $productInfo[$i]['product_name'] = $product['product_name'];
+                    $productInfo[$i]['product_image'] = $product['product_image'];
+                    $productInfo[$i]['type'] = $product['type'];
+                    $i++;
+                    if ($i >= $limit) {
+                        break;
+                    }
+                }
+            }
+            $productCategoryResult[$category['id']] = $productInfo;
+        }
+        
+        $this->set(compact('displayBanners','categories','productCategoryResult'));
     }
 
     /**

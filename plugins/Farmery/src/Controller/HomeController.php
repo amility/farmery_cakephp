@@ -20,6 +20,8 @@ class HomeController extends AppController
     public function index()
     {
         $bannersData = $this->Service->post('getHomePageBanners');
+        $communities = $this->Service->post('getCommunityList');
+        $blogData = $this->Service->post('getFeatureBlogs');
         $displayBanners = [];
         if (!empty($bannersData) && isset($bannersData['banners'])) {
             $displayBanners = $bannersData['banners'];
@@ -53,9 +55,38 @@ class HomeController extends AppController
             }
             $productCategoryResult[$category['id']] = $productInfo;
         }
-        // print_r($productCategoryResult);exit;
+        // print_r($communities);exit;
 
-        $this->set(compact('displayBanners','categories','productCategoryResult'));
+        $this->set(compact('displayBanners','categories','productCategoryResult','communities','blogData'));
+    }
+    public function productAjax() 
+    {
+        $this->autoRender = false;
+       
+            $category_id = $_GET['id'];
+         
+            $hub_id = 2; // TODO later we can make it dynemic
+            $limit = 5;
+            $productCategoryResult = array();
+            $productCategories = $this->Service->post('getCatalogByCategory', ['category_id' => $category_id, 'hub_id' => $hub_id]);
+            $productInfo = array();
+            $i = 0;
+            if(!empty($productCategories) && isset($productCategories['data']['products']))
+            {
+                foreach ($productCategories['data']['products']['data'] as $product) {
+                    $productInfo[$i]['id'] = $product['product_id'];
+                    $productInfo[$i]['product_name'] = $product['product_name'];
+                    $productInfo[$i]['product_image'] = $product['product_image'];
+                    $productInfo[$i]['type'] = $product['type'];
+                    $i++;
+                    if ($i >= $limit) {
+                        break;
+                    }
+                }
+            }    
+            $productCategoryResult = $productInfo;
+            echo json_encode(['error' => 0, 'data' => $productCategoryResult]);
+            exit;
     }
 
     /**

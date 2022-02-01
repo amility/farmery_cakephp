@@ -21,6 +21,8 @@ Router::plugin(
             $routes->connect('/refundPolicy', ['controller' => 'Support', 'action' => 'refundPolicy', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "refundPolicy"]);
             $routes->connect('/shippingPolicy', ['controller' => 'Support', 'action' => 'shippingPolicy', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "shippingPolicy"]);
             
+            $routes->connect('/productAjax', ['controller' => 'Home', 'action' => 'productAjax', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "productAjax"]);
+            
             $routes->connect('/whyfarmery', ['controller' => 'Whyfarmery', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "whyFarmery"]);
             $routes->connect('/subscription', ['controller' => 'Subscription', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "subscription"]);
             $routes->connect('/wallet', ['controller' => 'Wallet', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "wallet"]);

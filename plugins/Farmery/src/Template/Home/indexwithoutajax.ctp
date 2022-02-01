@@ -554,12 +554,11 @@
 <section class="section-products-showcase col-sm-12">
     <div class="section-title strike bottom-space-adjust">
         <span>Our Products</span>
-        <div class="testingdata"></div>
     </div>
     <div class="d-flex justify-content-center">
         <div class="d-flex category-buckets justify-content-between">
             <?php foreach($categories['data'] as $category){?>
-            <div class="card category-card mx-auto p-xl-4 p-md-2" onclick="productdata(<?= $category['id']?>);"
+            <div class="card category-card mx-auto p-xl-4 p-md-2"
                 data-target="product-listing-<?php echo $category['id']?>">
                 <div class="card-body">
                     <img class="img-fluid" src="<?php echo $category['category_image']?>"
@@ -578,12 +577,12 @@
                 <div class="d-flex justify-content-center px-3">
                     <div class="card product-card justify-content-between">
                         <div class="card-img-top">
-                            <img src="<?php echo $product['product_image']; ?>"
-                                alt="<?php echo $product['product_name']; ?>">
+                            <img src="<?php echo $product['product_image']; ?>" alt="<?php echo $product['product_name']; ?>">
                         </div>
                         <div class="card-footer">
                             <p class="card-text">
-                                <a href="subscription"><?php echo $product['product_name']; ?></a>
+                                <a
+                                    href="subscription"><?php echo $product['product_name']; ?></a>
                             </p>
                         </div>
                     </div>
@@ -592,7 +591,8 @@
                 <div class="px-3 d-flex justify-content-center">
                     <div class="card see-more-card">
                         <div class="card-body d-flex justify-content-center align-items-center">
-                            <a class="font-weight-bold" onclick="window.location='category'">
+                            <a class="font-weight-bold"
+                                onclick="window.location='category'">
                                 See All
                             </a>
                         </div>
@@ -600,30 +600,9 @@
                 </div>
             </div>
             <?php } ?>
+
         </div>
     </div>
-    <script>
-    function productdata(id) {
-        $.ajax({
-            type: "GET",
-            url: 'productAjax',
-            data: {
-                id: id
-            },
-            cache: false,
-            beforeSend: function(xhr) {
-                xhr.setRequestHeader('X-CSRF-Token', csrfToken);
-            },
-            success: function(data) {
-                $('.testingdata').html("bhjk");
-                for (value in data.data) {
-                    console.log(value);
-
-                }
-            }
-        });
-    };
-    </script>
     <div class="mobile-contents">
         <div class="w-85 d-flex justify-content-center">
             <div class="img-div">
@@ -653,25 +632,143 @@
                     <div class="slick-list draggable">
                         <div class="slick-track"
                             style="opacity: 1; width: 2421px; transform: translate3d(0px, 0px, 0px);">
-
-                            <?php foreach ($communities['data'] as $community){?>
+                            <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false"
+                                style="width: 269px;">
+                                <div>
+                                    <div class="community-card" style="width: 100%; display: inline-block;">
+                                        <div class="card-img-top">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-621901142-1599462802.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                        </div>
+                                        <div class="card-footer">
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="Ghaziabad" tabindex="0">Ghaziabad</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false"
                                 style="width: 269px;">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">
                                         <div class="card-img-top">
-                                            <img src=" <?php echo $community['image'];?>"
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1245012783-1599462878.jpg'?>"
                                                 onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
                                         </div>
                                         <div class="card-footer">
                                             <a class="pt-4 h5 text-capitalize stretched-link community-link"
-                                                data-target="<?php echo $community['name'];?>"
-                                                tabindex="0"><?php echo $community['name'];?></a>
+                                                data-target="New Gurgaon" tabindex="0">New Gurgaon</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <?php } ?>
+                            <div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false"
+                                style="width: 269px;">
+                                <div>
+                                    <div class="community-card" style="width: 100%; display: inline-block;">
+                                        <div class="card-img-top">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-528143318-1599462955.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                        </div>
+                                        <div class="card-footer">
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="Old Gurgaon" tabindex="0">Old Gurgaon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick-slide slick-active" data-slick-index="3" aria-hidden="false"
+                                style="width: 269px;">
+                                <div>
+                                    <div class="community-card" style="width: 100%; display: inline-block;">
+                                        <div class="card-img-top">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1250844290-1599463027.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                        </div>
+                                        <div class="card-footer">
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="Noida" tabindex="0">Noida</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick-slide" data-slick-index="4" aria-hidden="true" style="width: 269px;"
+                                tabindex="-1">
+                                <div>
+                                    <div class="community-card" style="width: 100%; display: inline-block;">
+                                        <div class="card-img-top">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-622278358-1599463089.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                        </div>
+                                        <div class="card-footer">
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="South Delhi " tabindex="-1">South Delhi </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick-slide" data-slick-index="5" aria-hidden="true" style="width: 269px;"
+                                tabindex="-1">
+                                <div>
+                                    <div class="community-card" style="width: 100%; display: inline-block;">
+                                        <div class="card-img-top">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-2117151287-1599463153.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                        </div>
+                                        <div class="card-footer">
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="South Delhi   2" tabindex="-1">South Delhi
+                                                2</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick-slide" data-slick-index="6" aria-hidden="true" style="width: 269px;"
+                                tabindex="-1">
+                                <div>
+                                    <div class="community-card" style="width: 100%; display: inline-block;">
+                                        <div class="card-img-top">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-957758512-1599463201.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                        </div>
+                                        <div class="card-footer">
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="South West Delhi" tabindex="-1">South West
+                                                Delhi</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick-slide" data-slick-index="7" aria-hidden="true" style="width: 269px;"
+                                tabindex="-1">
+                                <div>
+                                    <div class="community-card" style="width: 100%; display: inline-block;">
+                                        <div class="card-img-top">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-1502062021-1599463349.png'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                        </div>
+                                        <div class="card-footer">
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="Greater Noida" tabindex="-1">Greater Noida</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick-slide" data-slick-index="8" aria-hidden="true" style="width: 269px;"
+                                tabindex="-1">
+                                <div>
+                                    <div class="community-card" style="width: 100%; display: inline-block;">
+                                        <div class="card-img-top">
+                                            <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/10-12-2021-243401253-1639118695.jpg'?>"
+                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                        </div>
+                                        <div class="card-footer">
+                                            <a class="pt-4 h5 text-capitalize stretched-link community-link"
+                                                data-target="Meerut" tabindex="-1">Meerut</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div><button type="button" class="is-right slick-next slick-arrow" style=""
                         aria-disabled="false"><i class="fa fa-angle-right angle-style" aria-hidden="true"></i></button>
@@ -689,15 +786,17 @@
         <div class="col-xl-7  col-12 community-info ">
             <div class="community-description">
                 <div class="card-img-top">
-                    <img src="<?php echo $communities['data'][0]['image'];?>" id="selected-community-image"
+                    <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/07-09-2020-621901142-1599462802.jpg'?>"
+                        id="selected-community-image"
                         onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
                         class="border">
                 </div>
                 <div class="card-body pt-5">
-                    <p class="h3 font-weight-bolder" id="selected-community-name">
-                        <?php echo $communities['data'][0]['name'];?></p>
-                    <p class="pt-2" id="selected-community-description">
-                        <?php echo $communities['data'][0]['description'];?> </p>
+                    <p class="h3 font-weight-bolder" id="selected-community-name">Ghaziabad</p>
+                    <p class="pt-2" id="selected-community-description">Just on the
+                        outskirts of Delhi, Ghaziabad is an old settlement with people from all
+                        across Uttar Pradesh staying here because of its proximity to Delhi. The
+                        area has its unique appeal with old settlers calling it their home. </p>
                     <button class="btn btn-lg btn-secondary" id="selected-community-link"
                         onclick="window.location='community'">
                         Explore
@@ -715,8 +814,7 @@
                                     <p class="stat-value font-weight-bold text-larger">
                                         <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/active_customers.png'?>"
                                             alt="community_active_customers" width="40%">
-                                        <span
-                                            id="selected-community-active-customers"><?php echo $communities['data'][0]['active_customer'];?></span>
+                                        <span id="selected-community-active-customers">18547</span>
                                     </p>
                                 </div>
                                 <div class="card-footer">
@@ -726,17 +824,13 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="col-6 p-0">
                             <div class="community-stat-card">
                                 <div class="card-body">
                                     <p class="stat-value font-weight-bold text-larger">
                                         <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/points_earned.png'?>"
                                             alt="community_points_earned" width="30%">
-                                        <span id="selected-community-deliveries"><?php $deliveries=0; foreach($communities['data'][0]['total_sales_by_year'] as $value){$deliveries =$deliveries + $value;
-                                        }
-                                        echo $deliveries;
-                                        ?></span>
+                                        <span id="selected-community-deliveries">851093</span>
                                     </p>
                                 </div>
                                 <div class="card-footer">
@@ -750,51 +844,18 @@
                     <hr>
                     <p class="my-3 font-weight-bold">What are your community people saying</p>
                     <div class="video-container embed-responsive embed-responsive-16by9">
-                        <?php echo $communities['data'][0]['video'];?>
+                        <iframe
+                            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFarmeryFarmFresh%2Fvideos%2F774912639622668%2F&amp;show_text=false&amp;width=734&amp;height=734&amp;appId"
+                            width="734" height="734" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowtransparency="true" allow="encrypted-media" allowfullscreen="true"></iframe>
                     </div>
                     <div class="events-container">
                         <p class="my-3 font-weight-bold">Events</p>
                         <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/farms.jpg'?>"
                             class="w-100" height="auto">
                         <div class="events">
-                            <div id="farmEvents" class="carousel slide" data-ride="carousel">
+                            <div id="farmEvents" class="carousel slide pointer-event" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    <?php if(!empty($communities['data'][0]['events'])){?>
-                                    <?php foreach($communities['data'][0]['events'] as $event){?>
-                                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                                        <div class="d-flex justify-content-center">
-                                            <div class="event-details p-4">
-                                                <div class="d-flex justify-content-between">
-                                                    <p class="font-weight-bolder text-smaller mb-0">
-                                                        <?php echo $event['name']; ?></p>
-                                                    <p class="font-weight-bolder text-smaller mb-0">
-                                                        <?php echo $event['date']; ?></p>
-                                                </div>
-                                                <p class="text-muted text-smaller">
-                                                    <?php echo $event['description']; ?>
-                                                </p>
-
-                                                <p class="mt-1 pb-0 font-weight-bold text-smaller">
-                                                    Share with your friends and family
-                                                </p>
-                                                <div class="d-flex">
-                                                    <a href="<?php echo $event['social_facebook']; ?>">
-                                                        <img
-                                                            src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/fb_icon.png'?>">
-                                                    </a>
-                                                    <a href="<?php echo $event['social_youtube']; ?>">
-                                                        <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/youtube_icon.png'?>"
-                                                            class="mx-3">
-                                                    </a>
-                                                    <a href="<?php echo $event['social_insta']; ?>">
-                                                        <img
-                                                            src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/ig_icon.png'?>">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <?php } } ?>
                                 </div>
                                 <a class="carousel-control-prev" href="#farmEvents" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon mr-lg-5" aria-hidden="true"></span>
@@ -1012,7 +1073,6 @@
                     <div class="slick-list draggable">
                         <div class="slick-track"
                             style="opacity: 1; width: 1200px; transform: translate3d(0px, 0px, 0px);">
-                            <?php foreach($blogData['blogs'] as $blog){?>
                             <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false"
                                 style="width: 400px;">
                                 <div>
@@ -1021,23 +1081,32 @@
                                         <div class="blog-card shadow rounded d-flex flex-column">
                                             <div class="justify-content-center d-flex">
                                                 <img class="card-img-top blog-img rounded"
-                                                    src="<?php echo $blog['image'];?>"
+                                                    src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/image-13.png';?>"
                                                     onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'"
                                                     alt="blog image">
                                             </div>
                                             <div class="card-body p-4 overflow-hidden">
                                                 <h5
                                                     class="text-primary text-center font-weight-bolder border-bottom pb-3">
-                                                    <?php echo $blog['short_description'];?></h5>
+                                                    Learn at Play!</h5>
                                                 <p class="card-text d-flex pt-3"></p>
-                                                <?php echo $blog['description'];?>
+                                                <blockquote>Kids are curious
+                                                    creatures. They take note of things that us adults don’t
+                                                    even notice.
+                                                    They get mesmerized by the mundane. Their developing
+                                                    brains are
+                                                    high-functioning machines that retain a lot of the
+                                                    information that they
+                                                    consume. This is why toddlers pick up words and habits
+                                                    so easily from</blockquote>
                                                 <p></p>
                                             </div>
                                             <div class="card-footer d-flex  justify-content-between mt-3">
-                                                <small class="text-muted"><?php echo $blog['publish_date'];?></small>
-                                                <small
-                                                    class="text-muted hide-on-mobile d-none d-md-block"><?php echo $blog['author'];?></small>
-                                                <a href="<?php echo $blog['read_more'];?>" target="_blank" tabindex="0">
+                                                <small class="text-muted">2 years ago</small>
+                                                <small class="text-muted hide-on-mobile d-none d-md-block">Harshita
+                                                    Jain</small>
+                                                <a href="https://blog.farmery.in/learn-at-play-2/" target="_blank"
+                                                    tabindex="0">
                                                     <small class="text-muted">Read More...</small>
                                                 </a>
                                             </div>
@@ -1045,7 +1114,88 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php } ?>
+                            <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false"
+                                style="width: 400px;">
+                                <div>
+                                    <div class="py-5 d-flex justify-content-center"
+                                        style="width: 100%; display: inline-block;">
+                                        <div class="blog-card shadow rounded d-flex flex-column">
+                                            <div class="justify-content-center d-flex">
+                                                <img class="card-img-top blog-img rounded"
+                                                    src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/image-4.png';?>"
+                                                    onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'"
+                                                    alt="blog image">
+                                            </div>
+                                            <div class="card-body p-4 overflow-hidden">
+                                                <h5
+                                                    class="text-primary text-center font-weight-bolder border-bottom pb-3">
+                                                    Help your child choose the best!</h5>
+                                                <p class="card-text d-flex pt-3"></p>
+                                                <blockquote>As parents, we want
+                                                    only the choicest options for our children. Be it
+                                                    education, clothes or
+                                                    toys, we seek out the best that we can provide for them.
+                                                    This care
+                                                    definitely stems from natural love and affection. But a
+                                                    cause for
+                                                    concern is their healthy growth, especially when it
+                                                    comes</blockquote>
+                                                <p></p>
+                                            </div>
+                                            <div class="card-footer d-flex  justify-content-between mt-3">
+                                                <small class="text-muted">2 years ago</small>
+                                                <small class="text-muted hide-on-mobile d-none d-md-block">Harshita
+                                                    Jain</small>
+                                                <a href="https://blog.farmery.in/help-your-child-choose-the-best/"
+                                                    target="_blank" tabindex="0">
+                                                    <small class="text-muted">Read More...</small>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false"
+                                style="width: 400px;">
+                                <div>
+                                    <div class="py-5 d-flex justify-content-center"
+                                        style="width: 100%; display: inline-block;">
+                                        <div class="blog-card shadow rounded d-flex flex-column">
+                                            <div class="justify-content-center d-flex">
+                                                <img class="card-img-top blog-img rounded"
+                                                    src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/ZXfdESDPqgUqWzS1_CgjviWa1JwKqzDy4jEoB_k_zv8KMTXiE-2J5UG3aKJw.png';?>"
+                                                    onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/placeholders/blog/blog.png';?>'"
+                                                    alt="blog image">
+                                            </div>
+                                            <div class="card-body p-4 overflow-hidden">
+                                                <h5
+                                                    class="text-primary text-center font-weight-bolder border-bottom pb-3">
+                                                    Baked Paneer Pops: Where health meets deliciousness!
+                                                </h5>
+                                                <p class="card-text d-flex pt-3"></p>
+                                                <p>Hello, foodies! Looking for a
+                                                    light and healthy snack for a fun evening? Maybe for
+                                                    dieting? Yes? Then,
+                                                    we at Farmery present to you a healthy and tasty guide
+                                                    to <em>paneer popcorn</em>. </p>
+                                                <p>Think about a healthy ingredient converted into a crispy
+                                                    snack. Salivating already? Why not! Paneer pops made
+                                                    from</p>
+                                                <p></p>
+                                            </div>
+                                            <div class="card-footer d-flex  justify-content-between mt-3">
+                                                <small class="text-muted">2 years ago</small>
+                                                <small class="text-muted hide-on-mobile d-none d-md-block">Harshita
+                                                    Jain</small>
+                                                <a href="https://blog.farmery.in/baked-paneer-pops-where-health-meets-deliciousness/"
+                                                    target="_blank" tabindex="0">
+                                                    <small class="text-muted">Read More...</small>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

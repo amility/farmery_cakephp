@@ -40,6 +40,9 @@
     <meta name="msapplication-TileImage" content="/assets/site/images/logo/favicon/favicon.png">
     <meta name="_token" content="jS1P0BQ9Cm1HdWSevK98qfDcV2tnkrhJlUKFLW33">
     <meta name="google-site-verification" content="XBNcr92bZhLH9Yzxv2AIWJRT58Zvxh7D8CE5j7NVxH4">
+    <script type="text/javascript">
+        var csrfToken = '<?php echo $this->request->getParam('_csrfToken'); ?>';
+    </script>
     <?php
     echo $this->Html->css(
         array(

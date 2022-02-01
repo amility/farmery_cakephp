@@ -1,26 +1,26 @@
 <!-- section1 vedio -->
-<section class="video-section section">
-    <div class="overlay"></div>
-    <video playsinline="playsinline" muted="muted" loop="loop" id="hero-video">
-        <source src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/video/farmery_intro_video.mp4"'?> type="video/mp4">
-    </video>
-    <div class="container h-100">
-        <div class="d-flex h-100 align-items-center">
-            <div class="d-flex flex-column w-100">
-                <div class="play-pause m-auto mb-5 d-none d-md-block">
-                    <a href="#" class="video-control" data-target="hero-video"><i class="fa fa-play fa-2x"></i></a>
-                </div>
-                <div class="text-center text-white m-auto pt-5">
-                    <h1 class="font-weight-normal">Our Everyday Journey starts from </h1>
-                    <h2 class="mb-0 font-weight-normal"><strong>Farm</strong> to your
-                        <strong>Doorstep</strong>
-                    </h2>
-                </div>
-                <div class="text-center arrow-down m-auto">
-                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/icon_down_arrow.png'?>" class="img-icon img-icon-lg" alt="">
-                </div>
+<section class="section-home-image"
+    style="background: white no-repeat center center; background-size: cover">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        </ol>
+        <div class="carousel-inner">
+            <?php foreach($displayBanners as $key => $displayBanner){?>
+            <div class="carousel-item <?php if($key == 0){echo'active';}?>">
+                <img src="<?php echo $displayBanner['image'];?>" class="d-block w-100">
+
             </div>
+           <?php } ?>
         </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"> </span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </section>
 <!-- section 1 ends -->

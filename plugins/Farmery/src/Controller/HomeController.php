@@ -18,8 +18,12 @@ class HomeController extends AppController
      */
     public function index()
     {
-        $banners=$this->Service->post('getHomePageBanners');
-        $this->set(compact('banners'));
+        $bannersData=$this->Service->post('getHomePageBanners');
+        $displayBanners = [];
+        if(!empty($bannersData) && isset($bannersData['banners'])){
+           $displayBanners = $bannersData['banners'];
+        }
+        $this->set(compact('displayBanners'));
     }
 
     /**

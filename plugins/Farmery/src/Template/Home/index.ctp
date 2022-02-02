@@ -733,7 +733,7 @@
                                     <p class="stat-value font-weight-bold text-larger">
                                         <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/points_earned.png'?>"
                                             alt="community_points_earned" width="30%">
-                                        <span id="selected-community-deliveries"><?php $deliveries=0; foreach($communities['data'][0]['total_sales_by_year'] as $value){$deliveries =$deliveries + $value;
+                                        <span id="selected-community-deliveries"><?php $deliveries=0; foreach($communities['data'][0]['total_volume_by_category'] as $value){$deliveries =$deliveries + $value;
                                         }
                                         echo $deliveries;
                                         ?></span>

@@ -21,7 +21,7 @@ class HomeController extends AppController
     {
         $bannersData = $this->Service->post('getHomePageBanners');
         $communities = $this->Service->post('getCommunityList');
-        $blogData = $this->Service->post('getFeatureBlogs');
+        $blogData = $this->Service->post('getFeatureBlogs',['blog_count'=>3]);
         $displayBanners = [];
         if (!empty($bannersData) && isset($bannersData['banners'])) {
             $displayBanners = $bannersData['banners'];

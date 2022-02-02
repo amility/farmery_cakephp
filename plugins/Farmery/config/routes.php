@@ -10,11 +10,13 @@ Router::plugin(
         $routes->fallbacks(DashedRoute::class);
         $routes->scope('/', function ($routes) {
             $routes->connect('/', ['controller' => 'Home', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "home"]);
-            $routes->connect('/category', ['controller' => 'Category', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "category"]);
             $routes->connect('/community', ['controller' => 'Community', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "community"]);
+            $routes->connect('/community/{community_name}', ['controller' => 'Community', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "community.community_name"]);
             $routes->connect('/orders', ['controller' => 'Orders', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "orders"]);
             $routes->connect('/products', ['controller' => 'Products', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "products"]);
+            $routes->connect('/products/{type}/{cat_id}', ['controller' => 'Products', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "products.cat"]);
             $routes->connect('/support', ['controller' => 'Support', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "support"]);
+            $routes->connect('/support/{cat_id}/{cat_name}', ['controller' => 'Support', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "support.cat"]);
             $routes->connect('/faq', ['controller' => 'Support', 'action' => 'faq', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "faq"]);
             $routes->connect('/privacyPolicy', ['controller' => 'Support', 'action' => 'privacyPolicy', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "privacyPolicy"]);
             $routes->connect('/termsandconditions', ['controller' => 'Support', 'action' => 'termsandconditions', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "termsandconditions"]);

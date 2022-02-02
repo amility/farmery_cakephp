@@ -19,8 +19,27 @@ class ProductsController extends AppController
     public function index()
     {
         $products = '';
-
-        $this->set(compact('products'));
+        $categories = $this->Service->post('getProductCategories');
+        $pageCategory = $categories['data'][0];
+        $cat_id = $categories['data'][0]['id'];
+        $isCategoryPage = false;
+        $hub_id = 2; // TODO later we can make it dynemic
+        $productCategoryResult = array();
+        if(isset($this->request->params['type']) && $this->request->params['type'] == 'category'){
+            if(isset($this->request->params['cat_id'])){
+                $isCategoryPage = true;
+                foreach ($categories['data'] as $category) {
+                    if (strcasecmp($cat_id, $category['id']) === 0) {
+                        $cat_id = $this->request->params['cat_id'];
+                        $pageCategory = $category;
+                    }
+                }
+            }
+        }
+        $productCategories = $this->Service->post('getCatalogByCategory', ['category_id' => $cat_id, 'hub_id' => $hub_id]);
+       
+        // print_r($productCategories['data']);exit;
+        $this->set(compact('products','categories','pageCategory','isCategoryPage','productCategories'));
     }
 
     /**

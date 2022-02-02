@@ -18,9 +18,14 @@ class SupportController extends AppController
      */
     public function index()
     {
-        $support = '';
-
-        $this->set(compact('support'));
+        $support = $this->Service->post('getFaq');
+        $categories = $this->Service->post('getProductCategories');
+        if(isset($this->request->params['cat_id']) && isset($this->request->params['cat_name'])){
+            $cat_id =  $this->request->params['cat_id'];
+            $cat_name =  $this->request->params['cat_name'];
+            $support = $this->Service->post('getFaq',['entity_id' => $cat_id, 'entity_type' => $cat_name]);
+        }
+        $this->set(compact('support','categories'));
     }
     public function faq()
     {

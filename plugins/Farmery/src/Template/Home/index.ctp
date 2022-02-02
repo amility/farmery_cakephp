@@ -592,7 +592,7 @@
                 <div class="px-3 d-flex justify-content-center">
                     <div class="card see-more-card">
                         <div class="card-body d-flex justify-content-center align-items-center">
-                            <a class="font-weight-bold" onclick="window.location='category'">
+                            <a class="font-weight-bold" onclick="window.location='/products/category/<?php echo $category['id']?>'">
                                 See All
                             </a>
                         </div>
@@ -655,7 +655,7 @@
                             style="opacity: 1; width: 2421px; transform: translate3d(0px, 0px, 0px);">
 
                             <?php foreach ($communities['data'] as $community){?>
-                            <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false"
+                            <div class="slick-slide slick-active" data-slick-index="<?php echo $community['id'];?>" aria-hidden="false"
                                 style="width: 269px;">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">

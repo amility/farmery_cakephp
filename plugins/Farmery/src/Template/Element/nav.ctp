@@ -17,10 +17,10 @@
             </div>
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link active" href="/" id="homePage">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="whyFarmery">Why Farmery</a></li>
+                <li class="nav-item"><a class="nav-link" href="/whyFarmery">Why Farmery</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle subnavbtn" href="products"
-                        onclick="window.location.href='products'" id="navbarDropdown" role="button"
+                        onclick="window.location.href='/products'" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Products
                     </a>
@@ -103,8 +103,8 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="community">Community</a></li>
-                <li class="nav-item"><a class="nav-link" href="support">Support</a></li>
+                <li class="nav-item"><a class="nav-link" href="/community">Community</a></li>
+                <li class="nav-item"><a class="nav-link" href="/support">Support</a></li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://blog.farmery.in/" data-target="_blank">Blog</a>
                 </li>

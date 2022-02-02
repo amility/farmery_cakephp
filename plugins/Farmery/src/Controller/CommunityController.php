@@ -18,9 +18,21 @@ class CommunityController extends AppController
      */
     public function index()
     {
-        $community = '';
-
-        $this->set(compact('community'));
+        $communities = $this->Service->post('getCommunityList');
+        $community = $communities['data'][0];
+        $community_id = 0;
+        if(isset($this->request->params['community_name'])){
+            $communityLabel =  $this->request->params['community_name'];
+            $communities = $this->Service->post('getCommunityList');
+            $community='';
+            foreach ($communities['data'] as $key => $communitylabeldata) {
+		    	if (strcmp($communityLabel, $communitylabeldata['name']) === 0) {
+		    		$community = $communitylabeldata;
+                    $community_id = $key;
+		    	}
+		    }
+        }
+        $this->set(compact('community','communities','community_id'));
     }
 
     /**

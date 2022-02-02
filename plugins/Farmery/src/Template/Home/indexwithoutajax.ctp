@@ -592,7 +592,7 @@
                     <div class="card see-more-card">
                         <div class="card-body d-flex justify-content-center align-items-center">
                             <a class="font-weight-bold"
-                                onclick="window.location='category'">
+                                onclick="window.location='/products/category/<?php echo $category['id']?>'">
                                 See All
                             </a>
                         </div>

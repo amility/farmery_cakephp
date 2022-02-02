@@ -6,8 +6,10 @@
             <div class="card bg-transparent shadow-none w-100">
                 <div class="card-body py-0">
                     <p class="font-weight-bold text-larger">
-                        <img src="img/active_customers.png" width="50%">
-                        <span id="selected-community-active-customers">18547</span>
+                        <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/active_customers.png'?>"
+                            width="50%">
+                        <span
+                            id="selected-community-active-customers"><?php echo $community['active_customer'];?></span>
                     </p>
                 </div>
                 <div class="card-footer border-0 bg-transparent pt-0">
@@ -30,7 +32,8 @@
                         </div>
                         <div class="input-group-append">
                             <button id="btn-search-comm" type="submit" class="btn shadow-none">
-                                <img src="img/black_search_icon.png" class="search-icon-comm">
+                                <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/black_search_icon.png'?>"
+                                    class="search-icon-comm">
                             </button>
                         </div>
                     </form>
@@ -44,8 +47,12 @@
                 <div class="card bg-transparent shadow-none w-100">
                     <div class="card-body py-0">
                         <p class="font-weight-bold text-larger">
-                            <img src="img/points_earned.png" width="20%">
-                            <span id="selected-community-deliveries">851093</span>
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/points_earned.png'?>"
+                                width="20%">
+                            <span id="selected-community-deliveries"><?php $deliveries=0; foreach($community['total_volume_by_category'] as $value){$deliveries =$deliveries + $value;
+                                        }
+                                        echo $deliveries;
+                                        ?></span>
                         </p>
                     </div>
                     <div class="card-footer border-0 bg-transparent pt-0">
@@ -58,7 +65,8 @@
     </div>
     <div class="d-flex justify-content-center">
         <div class="w-100 position-relative">
-            <img src="img/communityTopBanner.jpg" class="mt-1 bg-img" width="100%" height="auto">
+            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/communityTopBanner.jpg'?>"
+                class="mt-1 bg-img" width="100%" height="auto">
         </div>
     </div>
     <div class="d-xl-none d-lg-none d-block ">
@@ -67,8 +75,10 @@
                 <div class="card w-100 stat-card-style">
                     <div class="card-body py-0">
                         <p class="font-weight-bold text-larger">
-                            <img src="img/active_customers.png" width="50%">
-                            <span id="selected-community-active-customers">18547</span>
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/active_customers.png'?>"
+                                width="50%">
+                            <span
+                                id="selected-community-active-customers"><?php echo $community['active_customer'];?></span>
                         </p>
                     </div>
                     <div class="card-footer border-0 bg-white pt-0">
@@ -82,8 +92,12 @@
                 <div class="card stat-card-style w-100">
                     <div class="card-body py-0">
                         <p class="font-weight-bold text-larger">
-                            <img src="img/points_earned.png" width="25%">
-                            <span id="selected-community-deliveries">1702186</span>
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/points_earned.png'?>"
+                                width="25%">
+                            <span id="selected-community-deliveries"> <span id="selected-community-deliveries"><?php $deliveries=0; foreach($community['total_volume_by_category'] as $value){$deliveries =$deliveries + $value;
+                                        }
+                                        echo $deliveries;
+                                        ?></span></span>
                         </p>
                     </div>
                     <div class="card-footer border-0 bg-white pt-0">
@@ -102,98 +116,32 @@
         <div class="col-xl-4 col-md-4 col-sm-12 col-xs-12 d-flex justify-content-center">
             <div class="selected-div">
                 <p class="page-sub-title mb-0 pb-0">Selected Community</p>
-                <div class="card" data-community-id="1">
-                    <img src="img/07-09-2020-621901142-1599462802.jpg"
+                <div class="card" data-community-id="$community_id">
+                    <img src="<?php echo $community['image'];?>"
                         onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
                         class="card-img-comm ">
                     <div class="card-body text-center selected-card-comm p-2 bg-primary">
-                        <p class="font-weight-bolder text-white mb-0">Ghaziabad</p>
+                        <p class="font-weight-bolder text-white mb-0"><?php echo $community['name'];?></p>
                     </div>
                 </div>
                 <hr>
                 <p class="page-sub-title mb-0 pb-0">Other Communities</p>
                 <div class="d-flex scroll-div">
                     <div class="scroll-card">
-                        <div class="card" data-community-id="2">
-                            <img src="img/07-09-2020-1245012783-1599462878.jpg"
+							<?php foreach($communities['data'] as $key => $otherCommunities){?>
+							<?php if($key !== $community_id){?>
+                        <div class="card" data-community-id="<?php echo$key; ?>">
+                            <img src="<?php echo $otherCommunities['image'];?>"
                                 onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
                                 class="card-img-comm ">
                             <div class="card-body text-center selected-card-comm p-2 bg-primary">
-                                <a href="https://www.farmery.in/community/New%20Gurgaon">
-                                    <p class="font-weight-lighter text-white mb-0">New Gurgaon</p>
+                                <a href="/community/<?php echo $otherCommunities['name'];?>">
+                                    <p class="font-weight-lighter text-white mb-0"><?php echo $otherCommunities['name'];?></p>
                                 </a>
                             </div>
                         </div>
-                        <div class="card" data-community-id="3">
-                            <img src="img/07-09-2020-528143318-1599462955.jpg"
-                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
-                                class="card-img-comm ">
-                            <div class="card-body text-center selected-card-comm p-2 bg-primary">
-                                <a href="https://www.farmery.in/community/Old%20Gurgaon">
-                                    <p class="font-weight-lighter text-white mb-0">Old Gurgaon</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card" data-community-id="4">
-                            <img src="img/07-09-2020-1250844290-1599463027.jpg"
-                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
-                                class="card-img-comm ">
-                            <div class="card-body text-center selected-card-comm p-2 bg-primary">
-                                <a href="https://www.farmery.in/community/Noida">
-                                    <p class="font-weight-lighter text-white mb-0">Noida</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card" data-community-id="5">
-                            <img src="img/07-09-2020-622278358-1599463089.jpg"
-                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
-                                class="card-img-comm ">
-                            <div class="card-body text-center selected-card-comm p-2 bg-primary">
-                                <a href="https://www.farmery.in/community/South%20Delhi">
-                                    <p class="font-weight-lighter text-white mb-0">South Delhi </p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card" data-community-id="6">
-                            <img src="img/07-09-2020-2117151287-1599463153.jpg"
-                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
-                                class="card-img-comm ">
-                            <div class="card-body text-center selected-card-comm p-2 bg-primary">
-                                <a href="https://www.farmery.in/community/South%20Delhi%20%20%202">
-                                    <p class="font-weight-lighter text-white mb-0">South Delhi 2</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card" data-community-id="7">
-                            <img src="img/07-09-2020-957758512-1599463201.jpg"
-                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
-                                class="card-img-comm ">
-                            <div class="card-body text-center selected-card-comm p-2 bg-primary">
-                                <a href="https://www.farmery.in/community/South%20West%20Delhi">
-                                    <p class="font-weight-lighter text-white mb-0">South West Delhi</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card" data-community-id="8">
-                            <img src="img/07-09-2020-1502062021-1599463349.png"
-                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
-                                class="card-img-comm ">
-                            <div class="card-body text-center selected-card-comm p-2 bg-primary">
-                                <a href="https://www.farmery.in/community/Greater%20Noida">
-                                    <p class="font-weight-lighter text-white mb-0">Greater Noida</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card" data-community-id="9">
-                            <img src="img/10-12-2021-243401253-1639118695.jpg"
-                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
-                                class="card-img-comm ">
-                            <div class="card-body text-center selected-card-comm p-2 bg-primary">
-                                <a href="https://www.farmery.in/community/Meerut">
-                                    <p class="font-weight-lighter text-white mb-0">Meerut</p>
-                                </a>
-                            </div>
-                        </div>
+                        <?php } ?>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -204,49 +152,49 @@
                 <div class="w-95 d-flex justify-content-center">
                     <div class="video-container justify-content-center w-100 embed-responsive embed-responsive-16by9"
                         id="video">
-                        <<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFarmeryFarmFresh%2Fvideos%2F774912639622668%2F&amp;show_text=false&amp;width=734&amp;height=734&amp;appId" width="734" height="734" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" allowfullscreen="true"></iframe>
+                        <?php echo $community['video'];?>
                     </div>
                 </div>
             </div>
             <div class="ml-3 mt-5">
                 <p class="page-sub-title">Testimonials</p>
                 <div class="responsive-product-div">
-                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>" class="w-100 responsive-product-img" width="100%" height="auto">
+                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>"
+                        class="w-100 responsive-product-img" width="100%" height="auto">
                 </div>
                 <div class="row m-0">
                     <div class="col-xl-7 col-md-12 col-sm-12 col-xs-12 col-12 p-0">
                         <div class="testimonial-div rounded">
+                            <?php if($community['testimonial']!== null){?>
+                            <?php foreach($community['testimonial'] as $testimonial){?>
                             <div class="row m-0 pt-4  underline-style">
                                 <div class="col-md-5 col-lg-5 col-xl-5 col-12 text-center">
-                                    <img src="img/06-09-2020-1420573057-1599382294.jpg"
+                                    <img src="<?php echo $testimonial['customer_image'];?>"
                                         onerror="this.onerror=null; this.src='/assets/site/images/placeholders/user.svg'"
                                         class="rounded-circle testimonial-img">
-                                    <p class="mb-0 pt-2 font-weight-bolder text-capitalize">Khan Boyka</p>
-                                    <p class="text-muted">06, Sep 2020</p>
+                                    <p class="mb-0 pt-2 font-weight-bolder text-capitalize"><?php echo $testimonial['customer_name'];?></p>
+                                    <p class="text-muted"><?php echo $testimonial['publish_date'];?></p>
                                 </div>
                                 <div class="col-lg-7 col-md-7 col-xl-7 col-12">
-                                    <p class="mb-1 mt-1  font-weight-bolder text-capitalize">Fresh Mik</p>
-                                    <p class="text-muted text-capitalize">I found Farmery number option for
-                                        dairy products - specially their curd and Cows milk is awesome. best
-                                        organic fruits - not sure why there are some negative comments ,
-                                        it's
-                                        quite obvious they promulgate to offer organic fruit in the best
-                                        natural
-                                        condition.</p>
+                                    <p class="mb-1 mt-1  font-weight-bolder text-capitalize"><?php echo $testimonial['title'];?></p>
+                                    <p class="text-muted text-capitalize"><?php echo $testimonial['description'];?></p>
                                     <div class="stars-style">
-                                        <span class="fa fa-star  checked "></span>
-                                        <span class="fa fa-star  checked "></span>
-                                        <span class="fa fa-star  checked "></span>
-                                        <span class="fa fa-star  checked "></span>
-                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star  <?php if($testimonial['rating'] >=1){ echo 'checked';}  ?>"></span>
+                                        <span class="fa fa-star  <?php if($testimonial['rating'] >=2){ echo 'checked';}  ?>"></span>
+                                        <span class="fa fa-star  <?php if($testimonial['rating'] >=3){ echo 'checked';}  ?>"></span>
+                                        <span class="fa fa-star  <?php if($testimonial['rating'] >=4){ echo 'checked';}  ?>"></span>
+                                        <span class="fa fa-star  <?php if($testimonial['rating'] >=5){ echo 'checked';}  ?>"></span>
                                     </div>
                                 </div>
                             </div>
+                            <?php } ?>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="col-xl-5 side-img-outer-div">
                         <div class="side-img-div ml-3">
-                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>" class="w-100 side-img" width="100%">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/loader.png';?>"
+                                class="w-100 side-img" width="100%">
                         </div>
                     </div>
                 </div>
@@ -254,10 +202,47 @@
             <div class="ml-3 mt-5">
                 <p class="page-sub-title">Community Events</p>
                 <div class="farm-div">
-                    <img src="img/farms.jpg" class="w-100" height="auto">
+                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/farms.jpg'?>"
+                        class="w-100" height="auto">
                     <div class="event-details">
                         <div id="farmEvents" class="carousel slide w-100 pointer-event" data-ride="carousel">
                             <div class="carousel-inner">
+                            <?php if(!empty($community['events'])){?>
+                                    <?php foreach($community['events'] as $event){?>
+                                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                        <div class="d-flex justify-content-center">
+                                            <div class="event-details p-4">
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="font-weight-bolder text-smaller mb-0">
+                                                        <?php echo $event['name']; ?></p>
+                                                    <p class="font-weight-bolder text-smaller mb-0">
+                                                        <?php echo $event['date']; ?></p>
+                                                </div>
+                                                <p class="text-muted text-smaller">
+                                                    <?php echo $event['description']; ?>
+                                                </p>
+
+                                                <p class="mt-1 pb-0 font-weight-bold text-smaller">
+                                                    Share with your friends and family
+                                                </p>
+                                                <div class="d-flex">
+                                                    <a href="<?php echo $event['social_facebook']; ?>">
+                                                        <img
+                                                            src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/fb_icon.png'?>">
+                                                    </a>
+                                                    <a href="<?php echo $event['social_youtube']; ?>">
+                                                        <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/youtube_icon.png'?>"
+                                                            class="mx-3">
+                                                    </a>
+                                                    <a href="<?php echo $event['social_insta']; ?>">
+                                                        <img
+                                                            src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/ig_icon.png'?>">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php } } ?>
                             </div>
                             <a class="carousel-control-prev" href="#farmEvents" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon mr-lg-5" aria-hidden="true"></span>
@@ -312,6 +297,8 @@
                             </svg>
                         </div>
                         <script type="text/javascript">
+                            var labels = [<?php echo implode(',',array_keys($community['total_sales_by_year']));?>];
+                            var chatlabeldata = [<?php echo implode(',',$community['total_sales_by_year']);?>];
                         var ctvChart = document.getElementById('yjpkuxsfincblzeamvqgdworh').getContext(
                             '2d');
 
@@ -324,7 +311,7 @@
                                 "yjpkuxsfincblzeamvqgdworh").getContext("2d"), {
                                 type: data[0].type,
                                 data: {
-                                    labels: [2019, 2020, 2021, 2022],
+                                    labels: labels,
                                     datasets: data
                                 },
                                 options: {
@@ -348,7 +335,7 @@
                                 yjpkuxsfincblzeamvqgdworh_create([{
                                     "borderWidth": 2,
                                     "backgroundColor": "#f49d3f",
-                                    "data": [18407111, 22858630, 23806251, 1419615],
+                                    "data": chatlabeldata,
                                     "label": "Community Growth",
                                     "type": "bar"
                                 }])

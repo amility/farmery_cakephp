@@ -7,7 +7,7 @@
                 style="background: url('/assets/site//images/placeholders/backgrounds/section_first.png') white no-repeat center center; background-size: cover; background-color:transparent">
                 <video playsinline="playsinline" muted="muted" loop="loop" class="w-100 rounded"
                     id="why-farmery-hero-video">
-                    <source src="video/farmery_intro_video.mp4" type="video/mp4">
+                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/video/farmery_intro_video.mp4'?>" type="video/mp4">
                 </video>
                 <div class="play-pause">
                     <a class="video-control" data-target="why-farmery-hero-video"><i class="fa fa-play fa-2x"></i></a>
@@ -141,114 +141,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-xl-none d-lg-none d-block">
-            <div class="d-flex justify-content-center">
-                <div class="w-90">
-                    <p class="font-weight-bolder h1 text-center mb-3">Our Story</p>
-                    <div class="carousel slide pointer-event" data-ride="carousel" id="ourStory">
-
-                        <ul class="carousel-indicators carousel-indicator-override">
-                            <li data-target="#ourStory" data-slide-to="0" class="active bg-primary"></li>
-                            <li data-target="#ourStory" data-slide-to="1" class="bg-primary"></li>
-                            <li data-target="#ourStory" data-slide-to="2" class="bg-primary"></li>
-                            <li data-target="#ourStory" data-slide-to="3" class="bg-primary"></li>
-                            <li data-target="#ourStory" data-slide-to="4" class="bg-primary"></li>
-                        </ul>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="position-relative bg-dark">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                        class="rounded story-carousel-img">
-                                    <p class="font-weight-bold category-name-carousel pl-3 position-absolute h3">
-                                        Dairy </p>
-                                    <div class="position-absolute rounded overlay-container story-content mx-3 p-3">
-                                        <p class="font-weight-bolder h4 text-primary">Dairy Story</p>
-                                        <p class="text-primary"></p>
-                                        <p>2016: Farmery formally starts Cow Milk in glass bottles from West Delhi
-                                        </p>
-                                        <p>2017: Operations expand to all over Delhi NCR </p>
-                                        <p>2018: Farmery introduces Buffalo Milk 2019: Farmery reaches 5000 families
-                                            daily.</p>
-                                        <p>2019: Farmery launches A2 Cow Milk 2020: Farmery reach 7000+ households
-                                            daily </p>
-                                        <p>2020: Farmery introduces Paneer, Probiotic Curd and Ghee to the portfolio
-                                        </p>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="position-relative bg-dark">
-                                    <img src="img/fruits.jpg" class="rounded story-carousel-img">
-                                    <p class="font-weight-bold category-name-carousel pl-3 position-absolute h3">
-                                        Fruits </p>
-                                    <div class="position-absolute rounded overlay-container story-content mx-3 p-3">
-                                        <p class="font-weight-bolder h4 text-primary">Fruits</p>
-                                        <p class="text-primary"></p>
-                                        <p>2019: Farmery introduces Fruits as a new product category in Sep 2019
-                                        </p>
-                                        <p>2020: Farmery increases the reach of fruits to over 1500 families across
-                                            Delhi NCR by Feb 2020 </p>
-                                        <p>2020: Farmery onboards 120 fruit farmers from across the country to
-                                            procure seasonal fruits directly from the farmers.</p>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="position-relative bg-dark">
-                                    <img src="img/groceries.jpg" class="rounded story-carousel-img">
-                                    <p class="font-weight-bold category-name-carousel pl-3 position-absolute h3">
-                                        Grocery</p>
-                                    <div class="position-absolute rounded overlay-container story-content mx-3 p-3">
-                                        <p class="font-weight-bolder h4 text-primary">Grocery</p>
-                                        <p class="text-primary"></p>
-                                        <p>2020: Farmery introduces Dry Grocery
-                                            supply to its patrons across Delhi NCR in tie up with Just Organic in
-                                            March 2020 during COVID times. </p>
-                                        <p>2020: Farmery introduces naturally grown, unpolished dry grocery products
-                                            from our farmer network under the Farmery brand.</p>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="position-relative bg-dark">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                        class="rounded story-carousel-img">
-                                    <p class="font-weight-bold category-name-carousel pl-3 position-absolute h3">
-                                        Vegetables</p>
-                                    <div class="position-absolute rounded overlay-container story-content mx-3 p-3">
-                                        <p class="font-weight-bolder h4 text-primary">Vegetables</p>
-                                        <p class="text-primary"></p>
-                                        <p>2020: Farmery introduces daily use
-                                            certified organic vegetables from partner farms around Delhi NCR as
-                                            patrons demand during COVID times. </p>
-                                        <p>2020: Farmery increases its
-                                            footprint and procures vegetables from certified organic farmers from
-                                            Himachal Pradesh, Haryana &amp; Rajasthan to expand the offering.</p>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="position-relative bg-dark">
-                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                        class="rounded story-carousel-img">
-                                    <p class="font-weight-bold category-name-carousel pl-3 position-absolute h3">
-                                        Fresh Juices</p>
-                                    <div class="position-absolute rounded overlay-container story-content mx-3 p-3">
-                                        <p class="font-weight-bolder h4 text-primary">Juices</p>
-                                        <p class="text-primary">2020: Farmery introduces Fresh Cold Pressed juices
-                                            with 3 varients.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
     </section>
     <!-- section 2 ends -->
     <!-- The Farmery Team-->
@@ -260,7 +153,7 @@
             <div class="rounded bg-team" style="">
                 <div class="d-flex justify-content-center team-container">
                     <div class="team-content pb-4">
-                        <img src="img/FarmeryTeam.jpg" class="w-100 rounded shadow">
+                        <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/FarmeryTeam.jpg'?>" class="w-100 rounded shadow">
                         <h2 class="font-weight-bold pt-4"> The Farmery Team</h2>
                         <p>Our team has a rich experience of managing complex operations in
                             sourcing, customer service, technology and logistics. It is managed by
@@ -284,7 +177,7 @@
                     <div class="video-container rounded mt-4"
                         style="background: url('/assets/site//images/placeholders/backgrounds/section_first.png') white no-repeat center center; background-size: cover; background-color: transparent">
                         <video playsinline="playsinline" loop="loop" class="w-100 rounded" id="founder-msg-video">
-                            <source src="video/MsgfromFounder.mp4" type="video/mp4">
+                            <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/video/MsgfromFounder.mp4'?>" type="video/mp4">
                         </video>
                         <div class="play-pause">
                             <a class="video-control" data-target="founder-msg-video">
@@ -343,7 +236,7 @@
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-flex justify-content-center">
                     <div class="w-80 align-self-center">
-                        <img src="img/Banner-to-edit-cut.jpg" style="width:300px !important;">
+                        <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/Banner-to-edit-cut.jpg'?>" style="width:300px !important;">
                     </div>
                 </div>
             </div>

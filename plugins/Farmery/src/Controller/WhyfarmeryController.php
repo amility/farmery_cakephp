@@ -18,9 +18,8 @@ class WhyfarmeryController extends AppController
      */
     public function index()
     {
-        $whyfarmery ='';
+        
 
-        $this->set(compact('whyfarmery'));
     }
 
     /**

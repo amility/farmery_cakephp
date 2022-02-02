@@ -23,7 +23,7 @@ Router::plugin(
             
             $routes->connect('/productAjax', ['controller' => 'Home', 'action' => 'productAjax', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "productAjax"]);
             
-            $routes->connect('/whyfarmery', ['controller' => 'Whyfarmery', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "whyFarmery"]);
+            $routes->connect('/whyFarmery', ['controller' => 'Whyfarmery', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "whyFarmery"]);
             $routes->connect('/subscription', ['controller' => 'Subscription', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "subscription"]);
             $routes->connect('/wallet', ['controller' => 'Wallet', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "wallet"]);
             $routes->connect('/general', ['controller' => 'general', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "general"]);

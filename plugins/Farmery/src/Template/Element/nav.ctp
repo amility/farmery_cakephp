@@ -16,7 +16,7 @@
                 </div>
             </div>
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link active" href="home" id="homePage">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/" id="homePage">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="whyFarmery">Why Farmery</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle subnavbtn" href="products"

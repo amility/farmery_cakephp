@@ -38,7 +38,6 @@ class ProductsController extends AppController
         }
         $productCategories = $this->Service->post('getCatalogByCategory', ['category_id' => $cat_id, 'hub_id' => $hub_id]);
        
-        // print_r($productCategories['data']);exit;
         $this->set(compact('products','categories','pageCategory','isCategoryPage','productCategories'));
     }
 
@@ -49,13 +48,26 @@ class ProductsController extends AppController
      * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function productDetails()
     {
-        $product = $this->Products->get($id, [
-            'contain' => [],
-        ]);
+        
+        if (isset($this->request->params['category_type'])) {
+			if ('subscription'==$this->request->params['category_type']) {
+                $products = $this->Service->post('getDairyProductDetails',['categoryId' => $this->request->params['category_id'], 'product_id' => $this->request->params['product_id']]);
+                $products = $products['data'];
+                $this->set(compact('products'));
+                $this->render('product_subscription');
+    
+            } else {
+               
+                    $products = $this->Service->post('getProductDetails',['category_id' => $this->request->params['category_id'], 'product_id' => $this->request->params['product_id']]);
+                    $products = $products['data'];
+                    $this->set(compact('products'));
+                    $this->render('product_general');
 
-        $this->set('product', $product);
+            }
+		}
+
     }
 
     /**

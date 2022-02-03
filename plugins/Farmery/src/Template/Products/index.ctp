@@ -146,7 +146,7 @@
                                 <?php } ?>
                                 <?php } ?>
                                 <button class="btn btn-secondary"
-                                    onclick="window.location='<?php echo"products/category/".$pageCategory['type']. '/'. $pageCategory['id'] ."/detail/". $product['product_id'];?>'">
+                                    onclick="window.location='<?php echo"/products/category/".$pageCategory['type']. '/'. $pageCategory['id'] ."/detail/". $product['product_id'];?>'">
                                     View
                                 </button>
                             </div>
@@ -198,12 +198,12 @@
                                     <?php if(isset($product['product_id'])){ ?>
                                     <?php if(isset($product['type'])){ ?>
                                     <a class="btn btn-secondary"
-                                        href="<?= "products/category/".$product['type'].'/' .$product['category_id']. "/detail/". $product['product_id']?>">
+                                        href="<?= "/products/category/".$product['type'].'/' .$product['category_id']. "/detail/". $product['product_id']?>">
                                         View Details
                                     </a>
                                     <?php }else{ ?>
                                     <a class="btn btn-secondary"
-                                        href="<?= "products/category/general/".$product['category_id'] ."/detail/". $product['product_id']?>">
+                                        href="<?= "/products/category/general/".$product['category_id'] ."/detail/". $product['product_id']?>">
                                         View Details
                                     </a>
                                     <?php } ?>

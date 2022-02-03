@@ -35,9 +35,7 @@ class SupportController extends AppController
     }
     public function privacyPolicy()
     {
-        $privacyPolicy = '';
-
-        $this->set(compact('privacyPolicy'));
+        $this->render('privacyPolicy');
     }
     public function termsandconditions()
     {

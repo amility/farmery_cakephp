@@ -15,6 +15,9 @@ Router::plugin(
             $routes->connect('/orders', ['controller' => 'Orders', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "orders"]);
             $routes->connect('/products', ['controller' => 'Products', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "products"]);
             $routes->connect('/products/{type}/{cat_id}', ['controller' => 'Products', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "products.cat"]);
+            
+            $routes->connect('/products/category/{category_type}/{category_id}/detail/{product_id}', ['controller' => 'Products', 'action' => 'productDetails', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "productDetails"]);
+            
             $routes->connect('/support', ['controller' => 'Support', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "support"]);
             $routes->connect('/support/{cat_id}/{cat_name}', ['controller' => 'Support', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "support.cat"]);
             $routes->connect('/faq', ['controller' => 'Support', 'action' => 'faq', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "faq"]);
@@ -26,9 +29,7 @@ Router::plugin(
             $routes->connect('/productAjax', ['controller' => 'Home', 'action' => 'productAjax', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "productAjax"]);
             
             $routes->connect('/whyFarmery', ['controller' => 'Whyfarmery', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "whyFarmery"]);
-            $routes->connect('/subscription', ['controller' => 'Subscription', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "subscription"]);
             $routes->connect('/wallet', ['controller' => 'Wallet', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "wallet"]);
-            $routes->connect('/general', ['controller' => 'general', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "general"]);
 		});	
 
 

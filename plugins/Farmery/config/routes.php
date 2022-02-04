@@ -20,13 +20,17 @@ Router::plugin(
             
             $routes->connect('/support', ['controller' => 'Support', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "support"]);
             $routes->connect('/support/{cat_id}/{cat_name}', ['controller' => 'Support', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "support.cat"]);
-            $routes->connect('/faq', ['controller' => 'Support', 'action' => 'faq', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "faq"]);
+            $routes->connect('/faq', ['controller' => 'Support', 'action' => 'faq', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "faq.cat"]);
+            $routes->connect('/faq/{cat_id}/{cat_name}', ['controller' => 'Support', 'action' => 'faq', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "faq"]);
             $routes->connect('/privacyPolicy', ['controller' => 'Support', 'action' => 'privacyPolicy', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "privacyPolicy"]);
             $routes->connect('/termsandconditions', ['controller' => 'Support', 'action' => 'termsandconditions', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "termsandconditions"]);
             $routes->connect('/refundPolicy', ['controller' => 'Support', 'action' => 'refundPolicy', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "refundPolicy"]);
             $routes->connect('/shippingPolicy', ['controller' => 'Support', 'action' => 'shippingPolicy', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "shippingPolicy"]);
             
             $routes->connect('/productAjax', ['controller' => 'Home', 'action' => 'productAjax', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "productAjax"]);
+            $routes->connect('/citiesAjax', ['controller' => 'Home', 'action' => 'citiesAjax', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "citiesAjax"]);
+            
+            $routes->connect('/sendRegisterOtp', ['controller' => 'Registration', 'action' => 'sendRegisterOtp', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "sendRegisterOtp"]);
             
             $routes->connect('/whyFarmery', ['controller' => 'Whyfarmery', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "whyFarmery"]);
             $routes->connect('/wallet', ['controller' => 'Wallet', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "wallet"]);

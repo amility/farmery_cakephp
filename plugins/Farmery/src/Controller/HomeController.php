@@ -59,6 +59,37 @@ class HomeController extends AppController
 
         $this->set(compact('displayBanners','categories','productCategoryResult','communities','blogData'));
     }
+    
+    public function citiesAjax() 
+    {
+        $city_id = $_GET['cityid'];
+        $areas = $this->Service->post('getCombinedAreasAndSubAreasList', ['city_id'=>$city_id]); 
+        
+        $area_data = $subarea_data = [];
+        $areadata["area_id"] = '';
+        $areadata["area_name"] ='Select Area' ;
+        $area_data[0]= $areadata;
+        $encodedData = json_encode($areas);
+        $decodedData = json_decode($encodedData,true);
+        foreach ($decodedData["area"] as $values) {
+            $areadata["area_id"] = $values["area_id"];
+            $areadata["area_name"] = $values["area_name"];
+            $area_data[$values["area_id"]]= $areadata;
+            if(empty($subarea_data[$values["area_id"]])){
+                $subareadata["hub_id"] = '';
+                $subareadata["sub_area_id"] = '';
+                $subareadata["subarea_name"] = 'Select Subarea' ;
+                $subarea_data[$values["area_id"]][]= $subareadata;
+            }
+            $subareadata["hub_id"] = $values["hub_id"];
+            $subareadata["sub_area_id"] = $values["sub_area_id"];
+            $subareadata["subarea_name"] = $values["subarea_name"];
+            $subarea_data[$values["area_id"]][]= $subareadata;
+        }
+        $Response = array('areadata'=> $area_data,'subareadata'=> $subarea_data);
+        echo json_encode($Response);
+        exit;
+    }
     public function productAjax() 
     {
         $this->autoRender = false;
@@ -85,10 +116,10 @@ class HomeController extends AppController
                 }
             }    
             $productCategoryResult = $productInfo;
-            echo json_encode(['error' => 0, 'data' => $productCategoryResult]);
+            $Response = array('data' => $productCategoryResult);
+            echo json_encode($Response);
             exit;
     }
-
     /**
      * View method
      *

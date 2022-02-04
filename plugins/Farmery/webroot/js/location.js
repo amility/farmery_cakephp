@@ -1,37 +1,101 @@
+(function ($) {
+    $.fn.getFormData = function () {
+
+        let data = {};
+
+        let dataArray = $(this).serializeArray();
+        for (var i = 0; i < dataArray.length; i++) {
+            data[dataArray[i].name] = dataArray[i].value;
+            delete data['undefined'];
+        }
+
+        return JSON.stringify(data);
+    }
+
+})(jQuery);
+$('#signup-form').submit(function (e) {
+
+    e.preventDefault();
+
+    $('#sign-up-message').html('');
+
+    if ($(this).valid()) {
+        // Submit to the backend
+        $.ajax({
+            url: 'sendRegisterOtp',
+            method: 'POST',
+            data:{
+                data: $(this).getFormData(),
+            },
+            
+
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('X-CSRF-Token', csrfToken);
+                $('#signup-form').attr('disabled', true);
+            },
+
+            complete: function () {
+                $('#signup-form').attr('disabled', false);
+            },
+
+            success: function (response) {
+
+                // $('input#first-name-otp').val($('#first-name').val());
+                // $('input#last-name-otp').val($('#last-name').val());
+                // $('input#your-mobile-no-otp').val($('#your-mobile-no').val());
+                // $('input#email-otp').val($('#email').val());
+                // $('input#city_id-otp').val($('#signup_city').val());
+                // $('input#area_id-otp').val($('#signup_area').val());
+                // $('input#sub_area_id-otp').val($('#signup_subarea').val());
+                // $('input#street-otp').val($('#street').val());
+
+                // $('#signup-form').hide();
+                // $('#signup-otp-form').show();
+
+                // var successhtml = '<div class="text-center pt-5 text-smaller"><p class="success">' + response.message + '</p></div>';
+                // $('#sign-up-message').html(successhtml);
+            },
+
+            error: function (xhr, status, error) {
+
+                var errorMessage = JSON.parse(xhr.responseText);
+                var failureHtml = '<div class="error text-center text-smaller"> <span style="color: red"> ' + errorMessage.error + '</span></div>';
+
+                $('#sign-up-message').html(failureHtml);
+            }
+        });
+    }
+});
 $(document).on('change', '#signup_city', function(){
     var cityid = $('#signup_city').val();
-var url = "https://www.farmery.in/cities/:cityid";
-url = url.replace(':cityid', cityid);
-
 $.ajax({
-
-    type: 'GET',
-
-    url: url,
-
+    type: "GET",
+    url: 'citiesAjax',
     data: {
-        "_token": "jS1P0BQ9Cm1HdWSevK98qfDcV2tnkrhJlUKFLW33",
+        cityid:cityid,
     },
-    beforeSend: function() {
+    cache: false,
+
+    beforeSend: function(xhr) {
+        xhr.setRequestHeader('X-CSRF-Token', csrfToken);
         $('.preloader').show();
         $(".preloader").css("opacity", "0.5");
     },
     complete: function() {
         $('.preloader').hide();
     },
-    success: function(data) {
+    success: function(result) {
+        var data = jQuery.parseJSON(result);
         subarea = data.subareadata;
         $('#signup_area').html("");
         var newOption = '';
         var options = '';
         $.each(data.areadata, function(key, response) {
-
             options = {
                 id: response.area_id,
                 text: response.area_name
 
             };
-
             var newOption = new Option(options.text, options.id, false, false);
             $('#signup_area').append(newOption);
             

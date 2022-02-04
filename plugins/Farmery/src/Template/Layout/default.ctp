@@ -180,19 +180,19 @@
                     <h5>Important Links</h5>
                     <ul class="pt-2">
                         <li>
-                            <a href="faq">FAQ's</a>
+                            <a href="/faq">FAQ's</a>
                         </li>
                         <li>
-                            <a href="privacyPolicy">Privacy Policy</a>
+                            <a href="/privacyPolicy">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="termsandconditions">Terms and Conditions</a>
+                            <a href="/termsandconditions">Terms and Conditions</a>
                         </li>
                         <li>
-                            <a href="refundPolicy">Refund Policy</a>
+                            <a href="/refundPolicy">Refund Policy</a>
                         </li>
                         <li>
-                            <a href="shippingPolicy">Shipping Policy</a>
+                            <a href="/shippingPolicy">Shipping Policy</a>
                         </li>
                     </ul>
                 </div>

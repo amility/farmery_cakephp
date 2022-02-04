@@ -47,12 +47,12 @@
                                 </div>
                                 <div class="d-flex mt-3">
                                     <button class="btn btn-secondary mr-4 mt-2"
-                                        onclick='JavaScript:fbq("track", "Start trial", {currency: "INR", product:1194, value:30});'
+                                       
                                         data-btn-type="start_trial" data-product-id="1194">
                                         Start Trial
                                     </button>
                                     <button class="btn btn-secondary mr-4 mt-2"
-                                        onclick='JavaScript:fbq("track", "Subscribe", {currency: "INR", product:1194, value:30});'
+                                        
                                         data-btn-type="create_subscription" data-product-id="1194">
                                         Start Subscription
                                     </button>

@@ -15,5 +15,7 @@ class AppController extends BaseController
 
         $pluginName = 'Farmery';
         $this->set(compact("pluginName"));
+        $getCities = $this->Service->get('getCities'); 
+        $this->set('getCities', $getCities);
     }
 }

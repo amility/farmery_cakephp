@@ -21,7 +21,7 @@ class ServiceComponent extends Component
         return $response->getJson();
     }
 
-    public function get($endpoint, $data)
+    public function get($endpoint, $data=[])
     {
         $this->SERVICE_BASE_URL='https://testing.milkmaster.co/V2Api/';
         $http = new Client();
@@ -30,7 +30,7 @@ class ServiceComponent extends Component
             $data
         );
         
-        return $response->getJson();
+        return $response->body();
     }
    
 

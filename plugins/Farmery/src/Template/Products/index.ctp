@@ -104,12 +104,12 @@
                                 <?php if(isset($product['action'])) { ?>
                                 <?php if(strcmp($product['action'], 'buy_trial') === 0){ ?>
                                 <button class="btn btn-secondary"
-                                    onclick='JavaScript:fbq("track", "Start trial", {currency: "INR", product:<?= $product["product_id"] ?>, value:<?= $product["price"] ?? null ?>});'
+                                    
                                     data-btn-type="start_trial" data-product-id="<?= $product['product_id'] ?>">
                                     Start Trial
                                 </button>
                                 <button class="btn btn-secondary"
-                                    onclick='JavaScript:fbq("track", "Subscribe", {currency: "INR", product:<?= $product["product_id"] ?>, value:<?= $product["price"] ?? null ?>});'
+                                   
                                     data-btn-type="create_subscription" data-product-id="<?= $product['product_id'] ?>">
                                     Start Subscription
                                 </button>
@@ -139,7 +139,7 @@
                                 </button>
                                 <?php }else{ ?>
                                 <button class="btn btn-secondary"
-                                    onclick='JavaScript:fbq("track", "Subscribe", {currency: "INR", product:<?= $product['product_id'] ?>, value:<?= $product['price'] ?? null ?>});'
+                                   
                                     data-btn-type="create_subscription" data-product-id="<?= $product['product_id'] ?>">
                                     Start Subscription
                                 </button>

@@ -9,7 +9,8 @@
                         <div class="carousel-item active">
                             <div class="row m-0">
                                 <div class="col p-0 d-none d-md-block">
-                                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/login_banner.png';?>" width="100%" height="auto">
+                                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/login_banner.png';?>"
+                                        width="100%" height="auto">
                                 </div>
                                 <div class="col">
                                     <button type="button" class="close pt-2 text-gray-300" data-dismiss="modal">
@@ -60,7 +61,8 @@
                         <div class="carousel-item">
                             <div class="row m-0">
                                 <div class="col p-0 d-none d-md-block">
-                                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/login_banner.png';?>" width="100%" height="auto">
+                                    <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/login_banner.png';?>"
+                                        width="100%" height="auto">
                                 </div>
                                 <div class="col">
                                     <button type="button" class="close pt-2 text-gray-300" data-dismiss="modal">
@@ -93,24 +95,11 @@
                                                     style="width: 100%;" required="">
                                                     <option value="" selected="selected">Select City
                                                     </option>
-                                                    <option value="1">
-                                                        Delhi
+                                                    <?php foreach(json_decode($getCities,true)["cities"] as $key => $value){?>
+                                                    <option value="<?= $key?>">
+                                                        <?= $value?>
                                                     </option>
-                                                    <option value="2">
-                                                        Gurugram
-                                                    </option>
-                                                    <option value="3">
-                                                        Ghaziabad
-                                                    </option>
-                                                    <option value="4">
-                                                        Noida
-                                                    </option>
-                                                    <option value="5">
-                                                        Greater Noida
-                                                    </option>
-                                                    <option value="6">
-                                                        Meerut
-                                                    </option>
+                                                    <?php } ?>
                                                 </select>
                                             </div>
                                             <div class="form-group mt-4">
@@ -152,8 +141,7 @@
                                                     placeholder="OTP" required="required">
                                             </div>
                                             <div class="form-group mt-4 d-flex justify-content-start">
-                                                <button class="btn btn-secondary btn-lg text-white px-lg-5 mr-auto"
-                                                    onclick='JavaScript:fbq("track", "Complete Registration", {first_name: $("#first-name-otp").val(), last_name: $("#last-name-otp").val(), mobile_number: $("#your-mobile-no-otp").val(), email: $("#email-otp").val()});'
+                                                <button class="btn btn-secondary btn-lg text-white px-lg-5 mr-auto "
                                                     type="submit">
                                                     Complete Sign Up
                                                 </button>

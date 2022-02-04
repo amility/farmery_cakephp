@@ -29,19 +29,30 @@ class SupportController extends AppController
     }
     public function faq()
     {
-        $faq = '';
-
-        $this->set(compact('faq'));
+        $support = $this->Service->post('getFaq');
+        $categories = $this->Service->post('getProductCategories');
+        $cat_name = '';
+        if(isset($this->request->params['cat_id']) && isset($this->request->params['cat_name'])){
+            $cat_id =  $this->request->params['cat_id'];
+            $cat_name =  $this->request->params['cat_name'];
+            $support = $this->Service->post('getFaq',['entity_id' => $cat_id, 'entity_type' => $cat_name]);
+        }
+        $this->set(compact('support','categories','cat_name'));
     }
     public function privacyPolicy()
     {
-        $this->render('privacyPolicy');
+        $title = 'Privacy Policy';
+        $legal = $this->Service->get('getPrivacyPolicy');
+        $this->set(compact('legal', 'title'));
+        $this->render('show');
     }
     public function termsandconditions()
     {
-        $termsandconditions = '';
+        $title = 'Terms and Conditions';
+        $legal = $this->Service->get('getTermsAndConditions');
+        $this->set(compact('legal', 'title'));
+        $this->render('show');
 
-        $this->set(compact('termsandconditions'));
     }
     public function refundPolicy()
     {

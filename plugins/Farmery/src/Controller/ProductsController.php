@@ -48,6 +48,106 @@ class ProductsController extends AppController
      * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
+    public function trial()
+    {
+        
+        if (isset($this->request->params['product_id'])) {
+            $response = $this->Service->post('getSubscriptionWithUnsubscribeProducts',true);
+            // ($this->request->params['product_id']);
+            $error = null;
+            if ($response instanceof Response && $response->status === false) {
+				return $response;
+			}
+print_r($response);exit;
+			$decodedResponse = json_decode($response, true);
+			$trialProducts = [];
+			foreach ($decodedResponse['products'] as $productResponse) {
+
+				if (array_key_exists('trial_id', $productResponse) && $productResponse['trial_id'] !== '') {
+					if (array_key_exists('status_label', $productResponse) && $productResponse['status_label'] === 'Not Subscribed') {
+
+						$product = new SubscriptionProduct();
+
+						$product->setProductId($productResponse['product_id']);
+						$product->setIcon($productResponse['icon']);
+						$product->setProductName($productResponse['product_name']);
+						$product->setProductImage($productResponse['product_image']);
+
+						if (isset($productResponse['unit_price'])) {
+							$product->setUnitPrice($productResponse['unit_price']);
+						}
+						$product->setPrice($productResponse['price']);
+						$product->setTrialName($productResponse['trial_name']);
+						$product->setTrialId($productResponse['trial_id']);
+						$product->setTrialType($productResponse['trial_type']);
+						$product->setTrialAmount($productResponse['trial_amount']);
+						$product->setTrialTotalQuantity($productResponse['trial_total_quantity']);
+
+						if (isset($productResponse['pack_balance'])) {
+							$product->setPackBalance($productResponse['pack_balance']);
+						}
+
+						if (isset($productResponse['delivery_cycle'])) {
+							$product->setDeliveryCycle($productResponse['delivery_cycle']);
+						}
+
+						if (isset($productResponse['custom_frequency'])) {
+							$product->setCustomFrequency($productResponse['custom_frequency']);
+						}
+
+						if (isset($productResponse['pack_size'])) {
+							$product->setPackSize($productResponse['pack_size']);
+						}
+
+						if (isset($productResponse['qty'])) {
+							$product->setQuantity($productResponse['qty']);
+						}
+
+						if (isset($productResponse['alternate_qty'])) {
+							$product->setAlternateQuantity($productResponse['alternate_qty']);
+						}
+
+						$product->setType($productResponse['type']);
+
+						if (isset($productResponse['time_slot'])) {
+							$product->setTimeSlot($productResponse['time_slot']);
+						}
+
+						if (isset($productResponse['delivery_mode'])) {
+							$product->setDeliveryMode($productResponse['delivery_mode']);
+						}
+
+						$product->setStartDate($productResponse['start_date']);
+						$product->setProductDescription($productResponse['description']);
+						$product->setStatus($productResponse['status']);
+						$product->setAction($productResponse['action']);
+						$product->setUnit($productResponse['unit']);
+						$product->setStatusLabel($productResponse['status_label']);
+
+						if (isset($productResponse['subscription_type'])) {
+							$product->setSubscriptionType($productResponse['subscription_type']);
+						}
+
+						$product->setAvailableFrequency($productResponse['available_frequency']);
+						$product->setAvailableTimeSlots($productResponse['available_timeslots']);
+						$product->setAvailableDeliveryModes($productResponse['available_delivery_modes']);
+						$product->setFaqData($productResponse['faq_data']);
+						$product->setTestimonials($decodedResponse['testimonial_data']);
+
+						$trialProducts[] = $product;
+					}
+				}
+			}
+
+			return $trialProducts;
+            exit;
+            if ( $product instanceof Response ) {
+                $error = $this->createError($product->message);
+            }
+            
+		}
+
+    }
     public function productDetails()
     {
         
@@ -68,6 +168,11 @@ class ProductsController extends AppController
             }
 		}
 
+    }
+    public function createSubscription()
+    {
+        
+exit();
     }
 
     /**

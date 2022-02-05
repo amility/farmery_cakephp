@@ -14,6 +14,9 @@ Router::plugin(
             $routes->connect('/community/{community_name}', ['controller' => 'Community', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "community.community_name"]);
             $routes->connect('/orders', ['controller' => 'Orders', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "orders"]);
             $routes->connect('/products', ['controller' => 'Products', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "products"]);
+            $routes->connect('/subscription/trial/product/{product_id}', ['controller' => 'Products', 'action' => 'trial', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "trial"]);
+            $routes->connect('/subscription/product/{product_id}', ['controller' => 'Products', 'action' => 'createSubscription', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "createSubscription"]);
+            
             $routes->connect('/products/{type}/{cat_id}', ['controller' => 'Products', 'action' => 'index', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "products.cat"]);
             
             $routes->connect('/products/category/{category_type}/{category_id}/detail/{product_id}', ['controller' => 'Products', 'action' => 'productDetails', 'plugin' => 'Farmery', 'prefix' => false], ["_name" => "productDetails"]);

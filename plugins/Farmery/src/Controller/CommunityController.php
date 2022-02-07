@@ -1,6 +1,6 @@
 <?php
 namespace Farmery\Controller;
-
+use Cake\Cache\Cache;
 use Farmery\Controller\AppController;
 
 /**
@@ -18,7 +18,11 @@ class CommunityController extends AppController
      */
     public function index()
     {
-        $communities = $this->Service->post('getCommunityList');
+        $communities = Cache::read('cache_community_list', 'one_year');
+        if ($communities === false) {
+            $communities = $this->Service->post('getCommunityList');
+            Cache::write('cache_community_list', $communities, 'one_year');
+        }
         $community = $communities['data'][0];
         $community_id = 0;
         if(isset($this->request->params['community_name'])){

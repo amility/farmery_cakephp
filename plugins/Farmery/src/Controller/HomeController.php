@@ -1,7 +1,7 @@
 <?php
 
 namespace Farmery\Controller;
-
+use Cake\Cache\Cache;
 use Farmery\Controller\AppController;
 
 /**
@@ -19,9 +19,20 @@ class HomeController extends AppController
      */
     public function index()
     {
+        //$time = microtime( TRUE );
         $bannersData = $this->Service->post('getHomePageBanners');
-        $communities = $this->Service->post('getCommunityList');
-        $blogData = $this->Service->post('getFeatureBlogs',['blog_count'=>3]);
+        //$time = microtime( TRUE ) - $time;
+        //echo "bannersData".$time."\n";
+        $communities = Cache::read('cache_community_list', 'one_year');
+        if ($communities === false) {
+            $communities = $this->Service->post('getCommunityList');
+            Cache::write('cache_community_list', $communities, 'one_year');
+        }
+        $blogData = Cache::read('cache_feature_blogs', 'one_year');
+        if ($blogData === false) {
+            $blogData = $this->Service->post('getFeatureBlogs',['blog_count'=>3]);
+            Cache::write('cache_feature_blogs', $blogData, 'one_year');
+        }
         $displayBanners = [];
         if (!empty($bannersData) && isset($bannersData['banners'])) {
             $displayBanners = $bannersData['banners'];
@@ -32,10 +43,15 @@ class HomeController extends AppController
         /**
          * get categories
          */
+        //$time = microtime( TRUE );
         $categories = $this->Service->post('getProductCategories');
+        //$time = microtime( TRUE ) - $time;
+        //echo "categories".$time."\n";
+        //die('end');
         $hub_id = 2; // TODO later we can make it dynemic
         $limit = 5;
         $productCategoryResult = array();
+       /*
         foreach ($categories['data'] as $category) {
             $productCategories = $this->Service->post('getCatalogByCategory', ['category_id' => $category['id'], 'hub_id' => $hub_id]);
             $productInfo = array();
@@ -54,7 +70,7 @@ class HomeController extends AppController
                 }
             }
             $productCategoryResult[$category['id']] = $productInfo;
-        }
+        }*/
         // print_r($communities);exit;
 
         $this->set(compact('displayBanners','categories','productCategoryResult','communities','blogData'));

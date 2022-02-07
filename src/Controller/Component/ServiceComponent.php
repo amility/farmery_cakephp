@@ -12,6 +12,7 @@ class ServiceComponent extends Component
     public function post($endpoint, $data=[])
     {
         $this->SERVICE_BASE_URL='https://testing.milkmaster.co/V2Api/';
+        //$this->SERVICE_BASE_URL='https://milkmaster.farmery.in/V2Api/';
         $http = new Client();
         $response = $http->post(
             $this->SERVICE_BASE_URL.$endpoint,
@@ -24,6 +25,7 @@ class ServiceComponent extends Component
     public function get($endpoint, $data=[])
     {
         $this->SERVICE_BASE_URL='https://testing.milkmaster.co/V2Api/';
+        //$this->SERVICE_BASE_URL='https://milkmaster.farmery.in/V2Api/';
         $http = new Client();
         $response = $http->get(
             $this->SERVICE_BASE_URL.$endpoint,

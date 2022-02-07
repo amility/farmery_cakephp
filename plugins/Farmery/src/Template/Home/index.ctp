@@ -654,14 +654,14 @@
                         <div class="slick-track"
                             style="opacity: 1; width: 2421px; transform: translate3d(0px, 0px, 0px);">
 
-                            <?php foreach ($communities['data'] as $community){?>
-                            <div class="slick-slide slick-active" data-slick-index="<?php echo $community['id'];?>" aria-hidden="false"
+                            <?php foreach ($communities['data'] as $key=>$community){?>
+                            <div class="slick-slide slick-active" data-slick-index="<?php echo $key;?>" aria-hidden="false"
                                 style="width: 269px;">
                                 <div>
                                     <div class="community-card" style="width: 100%; display: inline-block;">
                                         <div class="card-img-top">
                                             <img src=" <?php echo $community['image'];?>"
-                                                onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'">
+                                                onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/community_default.png';?>'">
                                         </div>
                                         <div class="card-footer">
                                             <a class="pt-4 h5 text-capitalize stretched-link community-link"
@@ -690,7 +690,7 @@
             <div class="community-description">
                 <div class="card-img-top">
                     <img src="<?php echo $communities['data'][0]['image'];?>" id="selected-community-image"
-                        onerror="this.onerror=null; this.src='/assets/site//images/placeholders/community/community_default.png'"
+                        onerror="this.onerror=null; this.src='<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/community_default.png';?>'"
                         class="border">
                 </div>
                 <div class="card-body pt-5">
@@ -713,7 +713,7 @@
                             <div class="community-stat-card">
                                 <div class="card-body">
                                     <p class="stat-value font-weight-bold text-larger">
-                                        <img src=" <?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/active_customers.png'?>"
+                                        <img src="<?php echo  \Cake\Routing\Router::url('/',true) .$pluginName.'/img/active_customers.png'?>"
                                             alt="community_active_customers" width="40%">
                                         <span
                                             id="selected-community-active-customers"><?php echo $communities['data'][0]['active_customer'];?></span>

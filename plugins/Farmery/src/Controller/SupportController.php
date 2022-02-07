@@ -1,6 +1,6 @@
 <?php
 namespace Farmery\Controller;
-
+use Cake\Cache\Cache;
 use Farmery\Controller\AppController;
 
 /**
@@ -18,7 +18,12 @@ class SupportController extends AppController
      */
     public function index()
     {
-        $support = $this->Service->post('getFaq');
+        
+        $support = Cache::read('cache_faq_list', 'one_year');
+        if ($support === false) {
+            $support = $this->Service->post('getFaq');
+            Cache::write('cache_faq_list', $support, 'one_year');
+        }
         $categories = $this->Service->post('getProductCategories');
         if(isset($this->request->params['cat_id']) && isset($this->request->params['cat_name'])){
             $cat_id =  $this->request->params['cat_id'];
@@ -29,7 +34,11 @@ class SupportController extends AppController
     }
     public function faq()
     {
-        $support = $this->Service->post('getFaq');
+        $support = Cache::read('cache_faq_list', 'one_year');
+        if ($support === false) {
+            $support = $this->Service->post('getFaq');
+            Cache::write('cache_faq_list', $support, 'one_year');
+        }
         $categories = $this->Service->post('getProductCategories');
         $cat_name = '';
         if(isset($this->request->params['cat_id']) && isset($this->request->params['cat_name'])){
@@ -42,14 +51,24 @@ class SupportController extends AppController
     public function privacyPolicy()
     {
         $title = 'Privacy Policy';
-        $legal = $this->Service->get('getPrivacyPolicy');
+        $legal = Cache::read('cache_privacy_policy', 'one_year');
+        if ($legal === false) {
+            $legal = $this->Service->get('getPrivacyPolicy');
+            Cache::write('cache_privacy_policy', $legal, 'one_year');
+        }
+        
         $this->set(compact('legal', 'title'));
         $this->render('show');
     }
     public function termsandconditions()
     {
         $title = 'Terms and Conditions';
-        $legal = $this->Service->get('getTermsAndConditions');
+        $legal = Cache::read('cache_term_and_conditions_policy', 'one_year');
+        if ($legal === false) {
+            $legal = $this->Service->get('getTermsAndConditions');
+            Cache::write('cache_term_and_conditions_policy', $legal, 'one_year');
+        }
+        
         $this->set(compact('legal', 'title'));
         $this->render('show');
 

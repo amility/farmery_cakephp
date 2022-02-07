@@ -76,7 +76,6 @@
         <div class="container-fluid m-0 p-0" id="content-wrapper">
             <?php echo $this->fetch('content') ?>
         </div>
-        <?= $this->element('Modal/locationModal') ?>
         <?= $this->element('Modal/cartModal') ?>
         <?= $this->element('Modal/loginModal') ?>
         <footer class="footer col-sm-12 p-0 m-0" id="footer">
@@ -224,6 +223,8 @@
             </div>
         </footer>
     </div>
+    <?= $this->element('Modal/locationModal') ?>
+
     <div id="modal-content"></div>
     <?= $this->element('Modal/deleteConfirmationModal') ?>
     <?php

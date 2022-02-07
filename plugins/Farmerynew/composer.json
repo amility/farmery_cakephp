@@ -11,12 +11,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Farmery\\": "src/"
+            "Farmerynew\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Farmery\\Test\\": "tests/",
+            "Farmerynew\\Test\\": "tests/",
             "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
         }
     }

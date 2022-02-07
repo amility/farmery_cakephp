@@ -36,7 +36,7 @@ class Application extends BaseApplication
     {
         // Call parent to load bootstrap from files.
         parent::bootstrap();
-        $this->addPlugin('Farmery',['routes' => true, 'autoload' => true]);
+        $this->addPlugin('Farmerynew',['routes' => true, 'autoload' => true]);
         if (PHP_SAPI === 'cli') {
             try {
                 $this->addPlugin('Bake');

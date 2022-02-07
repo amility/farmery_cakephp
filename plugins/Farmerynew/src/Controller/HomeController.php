@@ -15,7 +15,7 @@ class HomeController extends AppController
     public function beforeFilter(\Cake\Event\Event $event) {
         parent::beforeFilter($event);
         // disable Csrf on specefic action
-        $this->Auth->allow(['index']);
+        // $this->Auth->allow(['index']);
     }
     
     /**

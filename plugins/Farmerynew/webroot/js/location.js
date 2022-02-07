@@ -141,36 +141,37 @@ $(".subarea").hide();
 
 $(".cities").on('click', function() {
 
-var jqueryarray = [{"id":1,"name":"Delhi"},{"id":2,"name":"Gurugram"},{"id":3,"name":"Ghaziabad"},{"id":4,"name":"Noida"},{"id":5,"name":"Greater Noida "},{"id":6,"name":"Meerut"}]    ;
-const data = Object.values(jqueryarray);
-data.forEach(function(name) {
-    var changethecolor = document.getElementById(name.name);
+var jqueryarray = $('.getcitiesdata').val();
+var citiesdata = jQuery.parseJSON(jqueryarray);
+const data = citiesdata.cities;
+const citiesnamearray = Object.values(data);
+
+citiesnamearray.forEach(function(name) {
+    var changethecolor = document.getElementById(name);
     changethecolor.style.color = '';
 });
 var cityid = $(this).attr("data-id");
 this.style.color = 'red';
-var url = "https://www.farmery.in/cities/:cityid";
-url = url.replace(':cityid', cityid);
 $(".area").show();
 $(".subarea").hide();
-
 $.ajax({
-
-    type: 'GET',
-
-    url: url,
-
+    type: "GET",
+    url: 'citiesAjax',
     data: {
-        "_token": "jS1P0BQ9Cm1HdWSevK98qfDcV2tnkrhJlUKFLW33",
+        cityid:cityid,
     },
-    beforeSend: function(){
+    cache: false,
+    
+    beforeSend: function(xhr) {
+    xhr.setRequestHeader('X-CSRF-Token', csrfToken);
         $('.preloader').show();
         $(".preloader").css("opacity", "0.5");
     },
     complete: function(){
         $('.preloader').hide();
     },
-    success: function(data) {
+    success: function(result) {
+        var data = jQuery.parseJSON(result);
         subarea = data.subareadata;
         $('#area').html("");
         var newOption = '';
@@ -212,27 +213,27 @@ subareadata.forEach(function(subdata) {
 }
 });
 $("#subarea").on('change', function() {
+//for define cookie by ajax
+// var subareaid = $("#subarea").val();
+// var url = "https://www.farmery.in/subarea/:subareaid";
+// url = url.replace(':subareaid', subareaid);
+//  $.ajax({
 
-var subareaid = $("#subarea").val();
-var url = "https://www.farmery.in/subarea/:subareaid";
-url = url.replace(':subareaid', subareaid);
- $.ajax({
+//     type: 'GET',
 
-    type: 'GET',
+//     url: url,
 
-    url: url,
-
-    data: {
-        "_token": "jS1P0BQ9Cm1HdWSevK98qfDcV2tnkrhJlUKFLW33",
-    },
-    beforeSend: function(){
-        $('.preloader').show();
-    },
-    complete: function(){
-    },
-    success: function(data) {
-        window.location.reload();
-    }
-});
+//     data: {
+//         "_token": "jS1P0BQ9Cm1HdWSevK98qfDcV2tnkrhJlUKFLW33",
+//     },
+//     beforeSend: function(){
+//         $('.preloader').show();
+//     },
+//     complete: function(){
+//     },
+//     success: function(data) {
+//         window.location.reload();
+//     }
+// });
 
 });

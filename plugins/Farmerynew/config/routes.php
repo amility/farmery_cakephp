@@ -34,6 +34,7 @@ Router::plugin(
             $routes->connect('/citiesAjax', ['controller' => 'Home', 'action' => 'citiesAjax', 'plugin' => 'Farmerynew', 'prefix' => false], ["_name" => "citiesAjax"]);
             
             $routes->connect('/sendRegisterOtp', ['controller' => 'Registration', 'action' => 'sendRegisterOtp', 'plugin' => 'Farmerynew', 'prefix' => false], ["_name" => "sendRegisterOtp"]);
+            $routes->connect('/downloadapp', ['controller' => 'Registration', 'action' => 'getAppLink', 'plugin' => 'Farmerynew', 'prefix' => false], ["_name" => "getAppLink"]);
             
             $routes->connect('/whyFarmery', ['controller' => 'Whyfarmery', 'action' => 'index', 'plugin' => 'Farmerynew', 'prefix' => false], ["_name" => "whyFarmery"]);
             $routes->connect('/wallet', ['controller' => 'Wallet', 'action' => 'index', 'plugin' => 'Farmerynew', 'prefix' => false], ["_name" => "wallet"]);

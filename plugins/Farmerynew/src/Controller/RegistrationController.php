@@ -14,7 +14,7 @@ class RegistrationController extends AppController
     public function beforeFilter(\Cake\Event\Event $event) {
         parent::beforeFilter($event);
         // disable Csrf on specefic action
-        $this->Auth->allow(['index']);
+        // $this->Auth->allow(['index']);
     }
     /**
      * Index method
@@ -41,6 +41,15 @@ class RegistrationController extends AppController
 print_r($this->request->getParam('data'));
 print_r($data);
 exit;
+    }
+    public function getAppLink()
+    {
+        $phoneNumber = $this->request->getData();
+        //mobile no validation required
+        $this->Service->post('sendAppDownloadLink',$phoneNumber[0]);
+        $Response = array('result' => 'success', 'message' => 'We have sent an sms to your number ' . $phoneNumber[0] . ' with the download link');
+        echo json_encode($Response);
+        exit;
     }
 
     /**

@@ -1,1 +1,52 @@
-!function(e){var t={};function n(o){if(t[o])return t[o].exports;var r=t[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,n),r.l=!0,r.exports}n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)n.d(o,r,function(t){return e[t]}.bind(null,r));return o},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="/",n(n.s=165)}({165:function(e,t,n){e.exports=n(166)},166:function(e,t){$(document).ready((function(){$(document).on("submit","#download-app-form",(function(e){e.preventDefault(),$(this).valid()&&$.ajax({url:"/api/shop/register/downloadapp",method:"POST",data:$(this).getFormData(),beforeSend:function(){$("#download-app-submit-btn").attr("disabled",!0)},complete:function(){$("#download-app-submit-btn").attr("disabled",!1)},success:function(e){var t='<div class="text-center pt-5 text-smaller text-white"><p class="success">'+e.message+"</p></div>";$("form#download-app-form").slideUp("fast",(function(){$(this).before(t)}))},error:function(e,t,n){$("form#download-app-form").slideUp("fast",(function(){$(this).before("<div class=\"error text-center text-center pt-5 text-smaller\" style='margin-bottom: 20px'>Whoops ! There seems to be a problem right now. Please get in touch with us via email at <a class=\"text-white\" href='mailto:info@farmery.in'>info@farmery.in</div>")}))}})})),$(".download-app-slides").slick($.fn.getSlickConfig(4))}))}});
+// Handles the download app request
+
+$(document).ready(function () {
+
+	// Function to Handle download app submission
+	$(document).on("submit", "#download-app-form", function (e) {
+
+		e.preventDefault();
+
+		if ($(this).valid()) {
+
+			// Submit to the backend
+			$.ajax({
+                method: 'POST',
+                url: 'downloadapp',
+                data: $('.text-box-phone').val(),
+                cache: false,
+                
+                beforeSend: function(xhr) {
+                xhr.setRequestHeader('X-CSRF-Token', csrfToken);
+					$('#download-app-submit-btn').attr('disabled', true);
+				},
+
+				complete: function () {
+					$('#download-app-submit-btn').attr('disabled', false);
+					//$(this).reset();
+				},
+
+				success: function (result) {
+                    var response = jQuery.parseJSON(result);
+					var successhtml = '<div class="text-center pt-5 text-smaller text-white"><p class="success">' + response.message + '</p></div>';
+
+					$('form#download-app-form').slideUp('fast', function () {
+						$(this).before(successhtml);
+					});
+				},
+
+				error: function (xhr, status, error) {
+					var faliureHtml = '<div class="error text-center text-center pt-5 text-smaller" style=\'margin-bottom: 20px\'>Whoops ! There seems to be a problem right now. Please' +
+						' get in touch with us via email at <a class="text-white" href=\'mailto:info@farmery.in\'>info@farmery.in</div>';
+
+					$('form#download-app-form').slideUp('fast', function () {
+						$(this).before(faliureHtml);
+					});
+				}
+			});
+		}
+	});
+
+	// Download app section
+	$('.download-app-slides').slick($.fn.getSlickConfig(4));
+});
